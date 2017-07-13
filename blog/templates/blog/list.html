@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+{% include 'frontend/partials/navigation.html' %}
+
+    <div class="w3-content w3-padding-large">
+        {% for blog_post in blog_posts %}
+            <h1><a href="{{ blog_post.get_absolute_url }}">{{ blog_post.post_title }}</a></h1>
+            <p>Published {{ blog_post.post_publish }} by {{ blog_post.post_author }}</p>
+            <p>{{ blog_post.post_body|truncatewords:30|linebreaks }}</p>
+            <a href="{{ blog_post.get_absolute_url }}" class="w3-btn w3-black">Read more</a>
+
+        {% endfor %}
+    </div>
+{% endblock %}
+
