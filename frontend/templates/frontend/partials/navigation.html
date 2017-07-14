@@ -21,7 +21,16 @@
             </a>
             <a href="/contact" class="w3-bar-item  w3-button w3-hide-small w3-padding-large w3-hover-red">
                 Contact
-            </a></span>
+            </a>
+
+            {% if request.user.is_staff %}
+
+                <a href="/admin" class="w3-bar-item  w3-button w3-hide-small w3-padding-large w3-hover-red">
+                Admin
+                </a>
+            {% endif %}
+
+        </span>
     </div>
 </div>
 <!-- Navbar on small screens -->
@@ -30,4 +39,5 @@
     <a href="/blog" class="w3-bar-item w3-button w3-padding-large w3-hover-red">Blog</a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-red">Work</a>
     <a href="/contact" class="w3-bar-item w3-button w3-padding-large w3-hover-red">Contact</a>
+    {% if request.user.is_staff %}<a href="/admin" class="w3-bar-item w3-button w3-padding-large w3-hover-red">Admin</a>{% endif %}
 </div>
