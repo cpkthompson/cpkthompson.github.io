@@ -19,7 +19,7 @@ class BlogPost(models.Model):
     post_title = models.CharField(max_length=250)
     post_slug = models.SlugField(max_length=250, unique_for_date="post_publish")
     post_author = models.ForeignKey(User, related_name='blog_posts')
-    post_body = HTMLField()
+    post_body = models.TextField()
     post_publish = models.DateTimeField(default=timezone.now)
     post_created = models.DateTimeField(auto_now_add=True)
     post_updated = models.DateTimeField(auto_now=True)
