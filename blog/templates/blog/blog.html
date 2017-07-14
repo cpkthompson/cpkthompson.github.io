@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+    {% include 'frontend/partials/navigation.html' %}
+    <header class="w3-black w3-padding w3-padding-64">
+        <div class="w3-content w3-padding-32">
+            <div class="w3-xlarge w3-opacity">Blog</div>
+            <div class="w3-jumbo gothambold w3-hide-small" >Charles Thompson</div>
+            <h1 class="gothambold w3-hide-large w3-hide-medium" >Charles Thompson</h1>
+            <hr style="width:100px;border:5px solid white;padding: 0px" class="w3-round-large">
+        </div>
+    </header>
+
+
+    <div class="w3-content w3-container w3-padding-32">
+        <div class="w3-twothird w3-padding-16 w3-padding">
+
+            <h6 class="w3-text-grey w3-opacity gothambold" style="text-transform: uppercase">Blog Posts</h6>
+            {% for blog_post in blog_posts %}
+                <h2><a href="{{ blog_post.get_absolute_url }}" class="gothambold">{{ blog_post.post_title }}</a></h2>
+                <p>{{ blog_post.post_publish|date }}</p>
+                <p>{{ blog_post.post_body|truncatewords:30 }}</p>
+                <br>
+            {% endfor %}
+        </div>
+        <div class="w3-third w3-padding-16 w3-padding-large">
+            <br>
+        </div>
+    </div>
+
+
+
+
+
+    {% include 'frontend/partials/footer.html' %}
+{% endblock %}
+

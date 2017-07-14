@@ -1,14 +1,59 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% block content %}
-    <header class="w3-red w3-padding-64" style="padding:50px 16px;">
-        <div style="max-width: 1050px; margin: auto;">
+    {% include 'frontend/partials/navigation.html' %}
+
+    <header class="w3-black w3-padding w3-padding-64">
+        <div class="w3-content w3-padding-32">
             <div class="w3-xlarge w3-opacity">Hi. Hello. I'm</div>
             <div class="w3-jumbo gothambold w3-hide-small" >Charles Thompson</div>
             <h1 class="gothambold w3-hide-large w3-hide-medium" >Charles Thompson</h1>
-            <hr style="width:100px;border:5px solid white;padding: 0px" class="w3-round">
-            <div class="w3-xlarge w3-opacity w3-margin-bottom">Supreme Lord of Dorks <br>Designer & Developer from Ghana</div>
+            <hr style="width:100px;border:5px solid white;padding: 0px" class="w3-round-large">
+            <div class="w3-xlarge w3-opacity w3-margin-bottom">Supreme Lord of Dorks <br>Designer & Developer</div>
+            <a href="/about" class="w3-hover-red w3-large w3-border w3-border-white w3-padding" style="text-transform: uppercase">More about me</a>
         </div>
     </header>
-{% endblock %}
 
+    <div class="w3-content w3-container w3-padding-32">
+        <div class="w3-twothird w3-padding-16 w3-padding">
+            <h6 class="w3-text-grey w3-opacity gothambold" style="text-transform: uppercase">Recent Blog Posts</h6>
+            {% if blog_posts %}
+                {% for blog_post in blog_posts %}
+                    <h2><a href="{{ blog_post.get_absolute_url }}" class="gothambold">{{ blog_post.post_title }}</a></h2>
+                    <p class="w3-opacity">{{ blog_post.post_publish|timesince }}</p>
+                    <p>{{ blog_post.post_body|truncatewords:20 }}</p>
+                    <br>
+                {% endfor %}
+                <a href="/blog" class="gothambold w3-btn w3-black w3-padding-large">More blog posts</a>
+            {% else %}
+                <br>
+            {% endif %}
+
+        </div>
+        <div class="w3-third w3-padding-16 w3-padding-large">
+            <h6 class="w3-text-grey w3-opacity gothambold" style="text-transform: uppercase">Selected Projects</h6>
+            <div class="w3-padding-64 w3-red w3-padding-large">
+            </div>
+            <div class="w3-padding-64 w3-blue w3-padding-large">
+            </div>
+            <div class="w3-padding-64 w3-grey w3-padding-large">
+            </div>
+            <br><br>
+            <h6 class="w3-text-grey w3-opacity gothambold" style="text-transform: uppercase">Selected Posts</h6>
+            {% if blog_posts %}
+                 {% for blog_post in blog_posts %}
+                <h6><a href="{{ blog_post.get_absolute_url }}">{{ blog_post.post_title }}</a></h6>
+            {% endfor %}
+            {% else %}
+                <br>
+            {% endif %}
+
+
+
+
+        </div>
+    </div>
+
+
+    {% include 'frontend/partials/footer.html' %}
+{% endblock %}

@@ -1,15 +1,33 @@
 {% load staticfiles %}
-<div class="w3-navbar w3-red w3-padding-16">
+
+<div class="w3-bar w3-black w3-card-2 w3-large">
     <div style="max-width: 1200px; margin: auto;">
-        <li>
-            <a href="/" class="w3-hover-red">
-                <div class=>Charles Thompson</div>
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-red w3-large w3-black"
+           href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i
+                class="fa fa-bars"></i></a>
+
+        <span class="w3-left gothambold"><a href="/" class="w3-bar-item w3-button w3-padding-large w3-hover-red">
+                Charles Thompson
+            </a></span>
+
+        <span class="w3-right" style="text-transform: uppercase"><a href="/about" class="w3-bar-item  w3-button w3-hide-small w3-padding-large  w3-hover-red">
+                About
             </a>
-        </li>
-        <li>
-            <a href="/blog" class="w3-hover-red">
-                <div class=>Blog</div>
+            <a href="/blog" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-red">
+                Blog
             </a>
-        </li>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-red">
+                Work
+            </a>
+            <a href="/contact" class="w3-bar-item  w3-button w3-hide-small w3-padding-large w3-hover-red">
+                Contact
+            </a></span>
     </div>
+</div>
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-large" style="text-transform: uppercase">
+    <a href="/about" class="w3-bar-item w3-button w3-padding-large w3-hover-red">About</a>
+    <a href="/blog" class="w3-bar-item w3-button w3-padding-large w3-hover-red">Blog</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-red">Work</a>
+    <a href="/contact" class="w3-bar-item w3-button w3-padding-large w3-hover-red">Contact</a>
 </div>
