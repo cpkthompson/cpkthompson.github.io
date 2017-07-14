@@ -17,7 +17,7 @@
 
     <div class="w3-content w3-container w3-padding-32">
         <div class="w3-twothird w3-padding-16 w3-padding">
-            <h6 class="w3-text-grey w3-opacity gothambold" style="text-transform: uppercase">Recent Blog Posts</h6>
+            <h6 class="w3-text-grey w3-opacity" style="text-transform: uppercase">Recent Blog Posts</h6>
             {% if blog_posts %}
                 {% for blog_post in blog_posts %}
                     <h2><a href="{{ blog_post.get_absolute_url }}" class="gothambold">{{ blog_post.post_title }}</a></h2>
@@ -25,14 +25,14 @@
                     <p>{{ blog_post.post_body|truncatewords:20 }}</p>
                     <br>
                 {% endfor %}
-                <a href="/blog" class="gothambold w3-btn w3-black w3-padding-large">More blog posts</a>
+                <a href="/blog" class="w3-btn w3-black w3-padding-large">More blog posts</a>
             {% else %}
                 <br>
             {% endif %}
 
         </div>
         <div class="w3-third w3-padding-16 w3-padding">
-            <h6 class="w3-text-grey w3-opacity gothambold" style="text-transform: uppercase">Selected Projects</h6>
+            <h6 class="w3-text-grey w3-opacity" style="text-transform: uppercase">Selected Projects</h6>
             <div class="w3-padding-64 w3-red w3-padding-large">
             </div>
             <div class="w3-padding-64 w3-blue w3-padding-large">
@@ -40,7 +40,7 @@
             <div class="w3-padding-64 w3-grey w3-padding-large">
             </div>
             <br><br>
-            <h6 class="w3-text-grey w3-opacity gothambold" style="text-transform: uppercase">Selected Posts</h6>
+            <h6 class="w3-text-grey w3-opacity" style="text-transform: uppercase">Selected Posts</h6>
             {% if blog_posts %}
                 {% for blog_post in blog_posts %}
                     <h6><a href="{{ blog_post.get_absolute_url }}">{{ blog_post.post_title }}</a></h6>
