@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% block content %}
-{% include 'frontend/partials/navigation.html' %}
+    {% include 'frontend/partials/navigation.html' %}
 
-<div class="w3-content w3-padding-large w3-padding-32">
-    <h1 class="gothambold">{{ blog_post.post_title }}</h1>
-    <p>{{ blog_post.post_publish|date }}</p>
-    <p>{{ blog_post.post_body|linebreaks }}</p>
-</div>
-{% include 'frontend/partials/footer.html' %}
+    <div class="w3-content w3-padding-large w3-padding-32">
+        <h1 class="gothambold">{{ blog_post.post_title }}</h1>
+        <p>{{ blog_post.post_publish|date }}</p>
+        <p>{{ blog_post.post_body|linebreaks }}</p>
+    </div>
+    {% include 'frontend/partials/footer.html' %}
 {% endblock %}
 
 

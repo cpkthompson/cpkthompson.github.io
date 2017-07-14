@@ -6,8 +6,8 @@
     <header class="w3-black w3-padding w3-padding-64">
         <div class="w3-content w3-padding-32">
             <div class="w3-xlarge w3-opacity">Hi. Hello. I'm</div>
-            <div class="w3-jumbo gothambold w3-hide-small" >Charles Thompson</div>
-            <h1 class="gothambold w3-hide-large w3-hide-medium" >Charles Thompson</h1>
+            <div class="w3-jumbo gothambold w3-hide-small w3-text-white" >Charles Thompson</div>
+            <h1 class="gothambold w3-hide-large w3-hide-medium w3-text-white" >Charles Thompson</h1>
             <hr style="width:100px;border:5px solid white;padding: 0px" class="w3-round-large">
             <div class="w3-xlarge w3-opacity w3-margin-bottom">Supreme Lord of Dorks <br>Designer & Developer</div>
             <a href="/about" class="w3-hover-red w3-large w3-border w3-border-white w3-padding" style="text-transform: uppercase">More about me</a>
@@ -30,7 +30,7 @@
             {% endif %}
 
         </div>
-        <div class="w3-third w3-padding-16 w3-padding-large">
+        <div class="w3-third w3-padding-16 w3-padding">
             <h6 class="w3-text-grey w3-opacity gothambold" style="text-transform: uppercase">Selected Projects</h6>
             <div class="w3-padding-64 w3-red w3-padding-large">
             </div>
@@ -41,9 +41,9 @@
             <br><br>
             <h6 class="w3-text-grey w3-opacity gothambold" style="text-transform: uppercase">Selected Posts</h6>
             {% if blog_posts %}
-                 {% for blog_post in blog_posts %}
-                <h6><a href="{{ blog_post.get_absolute_url }}">{{ blog_post.post_title }}</a></h6>
-            {% endfor %}
+                {% for blog_post in blog_posts %}
+                    <h6><a href="{{ blog_post.get_absolute_url }}">{{ blog_post.post_title }}</a></h6>
+                {% endfor %}
             {% else %}
                 <br>
             {% endif %}
