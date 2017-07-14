@@ -5,34 +5,38 @@
 
     <header class="w3-black w3-padding w3-padding-64">
         <div class="w3-content w3-padding-32">
+
+            <img class="w3-circle w3-right w3-padding w3-hide-medium w3-hide-large" style="height: 100px" src="{% static 'images/profile.jpg' %}">
+            <img class="w3-circle w3-right w3-padding w3-hide-small" style="height: 200px" src="{% static 'images/profile.jpg' %}">
             <div class="w3-xlarge w3-opacity">Hi. Hello. I'm</div>
             <div class="w3-jumbo gothambold w3-hide-small w3-text-white" >Charles Thompson</div>
             <h1 class="gothambold w3-hide-large w3-hide-medium w3-text-white" >Charles Thompson</h1>
-            <div class="w3-xlarge w3-opacity w3-margin-bottom">Supreme Lord of Dorks. Designer & Developer</div>
+            <div class="w3-xlarge w3-opacity w3-margin-bottom" style="text-transform: uppercase">Designer & Developer</div>
             <hr style="width:100px;border:5px solid white;padding: 0px" class="w3-round-large">
             <br>
-            <a href="/about" class="w3-hover-red w3-large w3-border w3-border-white w3-padding-large w3-padding-16 w3-round-xxlarge" style="text-transform: uppercase">More about me</a>
+            <a href="/about" class="w3-hover-black w3-large w3-border w3-border-white w3-padding-large w3-padding-16 w3-round-xxlarge w3-white" style="text-transform: uppercase">More about me</a>
         </div>
     </header>
+    <br>
 
     <div class="w3-content w3-container w3-padding-32">
-        <div class="w3-twothird w3-padding-16 w3-padding">
-            <h6 class="w3-text-grey w3-opacity" style="text-transform: uppercase">Recent Blog Posts</h6>
+        <div class="w3-twothird w3-padding-16">
+            <h6 class="w3-text-grey w3-opacity w3-large" style="text-transform: uppercase">Recent Blog Posts</h6>
             {% if blog_posts %}
                 {% for blog_post in blog_posts %}
                     <h2><a href="{{ blog_post.get_absolute_url }}" class="gothambold">{{ blog_post.post_title }}</a></h2>
-                    <p class="w3-opacity">{{ blog_post.post_publish|timesince }}</p>
+                    <p class="w3-opacity">{{ blog_post.post_publish|timesince }} ago</p>
                     <p>{{ blog_post.post_body|truncatewords:20 }}</p>
                     <br>
                 {% endfor %}
-                <a href="/blog" class="w3-btn w3-black w3-padding-large">More blog posts</a>
+                <a href="/blog" class="w3-border-black w3-black w3-padding-large w3-round-xxlarge w3-hover-white w3-border">More blog posts</a>
             {% else %}
                 <br>
             {% endif %}
 
         </div>
-        <div class="w3-third w3-padding-16 w3-padding">
-            <h6 class="w3-text-grey w3-opacity" style="text-transform: uppercase">Selected Projects</h6>
+        <div class="w3-third w3-padding-16">
+            <h6 class="w3-large" style="text-transform: uppercase">Selected Projects</h6>
             <div class="w3-padding-64 w3-red w3-padding-large">
             </div>
             <div class="w3-padding-64 w3-blue w3-padding-large">
@@ -40,7 +44,7 @@
             <div class="w3-padding-64 w3-grey w3-padding-large">
             </div>
             <br><br>
-            <h6 class="w3-text-grey w3-opacity" style="text-transform: uppercase">Selected Posts</h6>
+            <h6 class="w3-large" style="text-transform: uppercase">Selected Posts</h6>
             {% if blog_posts %}
                 {% for blog_post in blog_posts %}
                     <h6><a href="{{ blog_post.get_absolute_url }}">{{ blog_post.post_title }}</a></h6>
@@ -48,10 +52,6 @@
             {% else %}
                 <br>
             {% endif %}
-
-
-
-
         </div>
     </div>
 
