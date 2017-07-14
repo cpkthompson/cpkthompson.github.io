@@ -2,7 +2,7 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
-
+from tinymce.models import HTMLField
 
 class PublishedManager(models.Manager):
 
@@ -19,7 +19,7 @@ class BlogPost(models.Model):
     post_title = models.CharField(max_length=250)
     post_slug = models.SlugField(max_length=250, unique_for_date="post_publish")
     post_author = models.ForeignKey(User, related_name='blog_posts')
-    post_body = models.TextField()
+    post_body = HTMLField()
     post_publish = models.DateTimeField(default=timezone.now)
     post_created = models.DateTimeField(auto_now_add=True)
     post_updated = models.DateTimeField(auto_now=True)
