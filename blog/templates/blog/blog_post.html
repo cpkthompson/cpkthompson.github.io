@@ -1,14 +1,19 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% block content %}
-    {% include 'frontend/partials/navigation.html' %}
 
-    <div class="w3-content w3-padding w3-padding-32">
-        <h1 style="font-weight: bold">{{ blog_post.post_title }}</h1>
+
+
+    <div class="w3-content w3-container w3-padding-32">
+        <h1 class="w3-xxxlarge">{{ blog_post.post_title }}</h1>
         <p>{{ blog_post.post_publish|date }}</p>
-        <p>{{ blog_post.post_body|linebreaks }}</p>
+        <article class="w3-content w3-twothird">
+            <p style="line-height: 1.9">{{ blog_post.post_body }}</p>
+        </article>
+        <div class="w3-third w3-padding-16 w3-padding-large">
+            <br>
+        </div>
     </div>
-    {% include 'frontend/partials/footer.html' %}
 {% endblock %}
 
 

@@ -1,1 +1,1 @@
-web: gunicorn cpkthompson.wsgi
+web: gunicorn backend.wsgi
