@@ -7,8 +7,8 @@
     <div class="w3-content w3-container w3-padding-32">
         <h1 class="w3-xxxlarge">{{ blog_post.post_title }}</h1>
         <p>{{ blog_post.post_publish|date }}</p>
-        <article class="w3-content w3-twothird">
-            <p style="line-height: 1.9">{{ blog_post.post_body }}</p>
+        <article class="w3-content w3-twothird" style="line-height: 1.9">
+            {{ blog_post.post_body }}
         </article>
         <div class="w3-third w3-padding-16 w3-padding-large">
             <br>
