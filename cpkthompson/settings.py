@@ -29,8 +29,7 @@ DEBUG = False
 # Application definition
 
 INSTALLED_APPS = [
-    'frontend',
-    'blog',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,7 +40,8 @@ INSTALLED_APPS = [
     # http://whitenoise.evans.io/en/stable/django.html#using-whitenoise-in-development
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
-
+    'frontend',
+    'blog',
 
 ]
 
