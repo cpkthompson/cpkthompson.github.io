@@ -5,7 +5,7 @@
         <div class="w3-content w3-padding-32">
             <div class="w3-xlarge w3-opacity">Hi. Hello. I'm</div>
             <div class="w3-jumbo w3-hide-small" style="font-family: Raleway">Charles Thompson</div>
-            <div class="w3-hide-large w3-hide-medium" style="font-family: Raleway">Charles Thompson</div>
+            <div class="w3-xxlarge w3-hide-large w3-hide-medium" style="font-family: Raleway">Charles Thompson</div>
             <div class="w3-xlarge w3-opacity w3-margin-bottom" style="text-transform: uppercase;font-weight: bold">Designer & Developer</div>
             <hr style="width:100px;border:5px solid white;padding: 0px" class="w3-round-large">
             <br>
@@ -24,6 +24,11 @@
                     <p>{{ blog_post.post_body|truncatewords:20 }}</p>
                     <br>
                 {% endfor %}
+                  <div style="max-width: 300px" >
+                    <div style="height: 0;border: 0; border-top: 1px solid black; margin: 0; "></div>
+                </div>
+                <br>
+                <br>
                 <a href="/blog" class="w3-border-black w3-black w3-padding-large w3-round-xxlarge w3-hover-white w3-border">More blog posts</a>
             {% else %}
                 <br>
@@ -47,6 +52,7 @@
             {% else %}
                 <br>
             {% endif %}
+            <br>
         </aside>
     </div>
 {% endblock %}
