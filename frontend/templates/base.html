@@ -53,47 +53,35 @@
 <body>
 <nav>
     <!-- Navbar on large/medium screens -->
-    <div class="w3-bar w3-black w3-card-2 w3-large ">
+    <div class="w3-black w3-bar w3-card-2">
         <div style="max-width: 1200px; margin: auto;">
-            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-black w3-bottombar w3-border-black w3-hover-border-white"
-               href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i
-                    class="fa fa-bars"></i></a>
 
-            <span class="w3-left"><a href="/" class="w3-bar-item w3-button w3-padding-large w3-hover-black w3-bottombar w3-border-black w3-hover-border-white">
-                Charles Thompson
-            </a></span>
-
-            <span class="w3-right" style="text-transform: uppercase">
-            <a href="/about" class="w3-hide-small w3-bar-item w3-button w3-padding-large w3-hover-black w3-bottombar w3-border-black w3-hover-border-white">
-                About
-            </a>
-            <a href="/blog" class="w3-hide-small w3-bar-item w3-button w3-padding-large w3-hover-black w3-bottombar w3-border-black w3-hover-border-white">
-                Blog
-            </a>
-            <a href="#" class="w3-hide-small w3-bar-item w3-button w3-padding-large w3-hover-black w3-bottombar w3-border-black w3-hover-border-white">
-                Work
-            </a>
-            <a href="/contact" class="w3-hide-small w3-bar-item w3-button w3-padding-large w3-hover-black w3-bottombar w3-border-black w3-hover-border-white">
-                Contact
-            </a>
+            <div class="w3-container w3-right">
+                <a href="/" class="w3-bar-item w3-button w3-padding w3-hover-black w3-bottombar w3-border-black w3-hover-border-white">
+                    Home
+                </a>
+                <a href="/about" class="w3-bar-item w3-button w3-padding w3-hover-black w3-bottombar w3-border-black w3-hover-border-white">
+                    About
+                </a>
+                <a href="#" class="w3-bar-item w3-button w3-padding w3-hover-black w3-bottombar w3-border-black w3-hover-border-white">
+                    Projects
+                </a>
+                <a href="/blog" class="w3-bar-item w3-button w3-padding w3-hover-black w3-bottombar w3-border-black w3-hover-border-white">
+                    Posts
+                </a>
+                <a href="/contact" class="w3-bar-item w3-button w3-padding w3-hover-black w3-bottombar w3-border-black w3-hover-border-white">
+                    Contact
+                </a>
 
                 {% if request.user.is_staff %}
-                    <a href="/admin" class="w3-hide-small w3-bar-item w3-button w3-padding-large w3-hover-black w3-bottombar w3-border-black w3-hover-border-white">
-                Admin
-                </a>
+                    <a href="/admin" class="w3-bar-item w3-button w3-padding w3-hover-black w3-bottombar w3-border-black w3-hover-border-white">
+                        Admin
+                    </a>
                 {% endif %}
-        </span>
+            </div>
         </div>
     </div>
 
-    <!-- Navbar on small screens -->
-    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-large" style="text-transform: uppercase">
-        <a href="/about" class="w3-bar-item w3-button w3-padding-large w3-hover-black w3-bottombar w3-border-black w3-hover-border-white">About</a>
-        <a href="/blog" class="w3-bar-item w3-button w3-padding-large w3-hover-black w3-bottombar w3-border-black w3-hover-border-white">Blog</a>
-        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-black w3-bottombar w3-border-black w3-hover-border-white">Work</a>
-        <a href="/contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black w3-bottombar w3-border-black w3-hover-border-white">Contact</a>
-        {% if request.user.is_staff %}<a href="/admin" class="w3-bar-item w3-button w3-padding-large w3-hover-black w3-bottombar w3-border-black w3-hover-border-white">Admin</a>{% endif %}
-    </div>
 </nav>
 {% block content %}
 {% endblock %}
@@ -102,16 +90,6 @@
         You're currently viewing a beta build of this site and as such, isn't perfect. Site also uses cookies and unless you're the cookie monster, there's no need to worry about them.
     </div>
 </footer>
-<script>
-    // Used to toggle the menu on small screens when clicking on the menu button
-    function myFunction() {
-        var x = document.getElementById("navDemo");
-        if (x.className.indexOf("w3-show") == -1) {
-            x.className += " w3-show";
-        } else {
-            x.className = x.className.replace(" w3-show", "");
-        }
-    }
-</script>
+
 </body>
 </html>
