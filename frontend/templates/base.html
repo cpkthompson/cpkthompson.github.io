@@ -53,10 +53,34 @@
 <body>
 <nav>
     <!-- Navbar on large/medium screens -->
-    <div class="w3-black w3-bar w3-card-2">
-        <div style="max-width: 1200px; margin: auto;">
+    <div class="w3-black w3-bar">
+        <div style="max-width: 1200px; margin: auto;" >
 
-            <div class="w3-container w3-right">
+            <div class="w3-container w3-right w3-hide-small">
+                <a href="/" class="w3-bar-item w3-button w3-padding w3-hover-black w3-bottombar w3-border-black w3-hover-border-white">
+                    Home
+                </a>
+                <a href="/about" class="w3-bar-item w3-button w3-padding w3-hover-black w3-bottombar w3-border-black w3-hover-border-white">
+                    About
+                </a>
+                <a href="#" class="w3-bar-item w3-button w3-padding w3-hover-black w3-bottombar w3-border-black w3-hover-border-white">
+                    Projects
+                </a>
+                <a href="/blog" class="w3-bar-item w3-button w3-padding w3-hover-black w3-bottombar w3-border-black w3-hover-border-white">
+                    Posts
+                </a>
+                <a href="/contact" class="w3-bar-item w3-button w3-padding w3-hover-black w3-bottombar w3-border-black w3-hover-border-white">
+                    Contact
+                </a>
+
+                {% if request.user.is_staff %}
+                    <a href="/admin" class="w3-bar-item w3-button w3-padding w3-hover-black w3-bottombar w3-border-black w3-hover-border-white">
+                        Admin
+                    </a>
+                {% endif %}
+            </div>
+
+            <div class="w3-padding-16 w3-right w3-small w3-hide-large w3-hide-medium">
                 <a href="/" class="w3-bar-item w3-button w3-padding w3-hover-black w3-bottombar w3-border-black w3-hover-border-white">
                     Home
                 </a>
@@ -85,6 +109,7 @@
 </nav>
 {% block content %}
 {% endblock %}
+<br>
 <footer class="w3-black w3-padding w3-padding-64">
     <div class="w3-content w3-padding-32 w3-text-dark-grey w3-opacity">
         You're currently viewing a beta build of this site and as such, isn't perfect. Site also uses cookies and unless you're the cookie monster, there's no need to worry about them.
