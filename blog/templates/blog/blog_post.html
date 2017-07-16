@@ -9,7 +9,7 @@
             <h1 class="w3-xxxlarge">{{ blog_post.post_title }}</h1>
             <p style="font-style: italic">{{ blog_post.post_publish|date }}</p>
         </header>
-        <article class="w3-content w3-padding w3-twothird" style="line-height: 1.9">
+        <article class="w3-content w3-twothird" style="line-height: 1.9">
             {{ blog_post.post_body|markdown }}
             {% markdown_cheatsheet %}
         </article>
