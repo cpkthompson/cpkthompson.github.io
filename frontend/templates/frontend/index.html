@@ -22,44 +22,41 @@
     </header>
     <br>
     <div id="body" class="w3-content w3-container w3-padding-8">
-        <div class="w3-twothird w3-padding-16 w3-container">
-            <h6 class="w3-opacity w3-large" style="text-transform: uppercase">Recent Posts</h6>
+        <div class="w3-threequarter w3-padding-16">
+            <div class="w3-opacity w3-large" style="text-transform: uppercase">Recent Posts</div>
             {% if blog_posts %}
                 {% for blog_post in blog_posts %}
-                    <h2><a href="{{ blog_post.get_absolute_url }}">{{ blog_post.post_title }}</a></h2>
+                    <h2><a href="{{ blog_post.get_absolute_url }}" class="w3-text-black">{{ blog_post.post_title }}</a></h2>
                     <p class="w3-opacity">{{ blog_post.post_publish|timesince }} ago</p>
                     <p>{{ blog_post.post_body|truncatewords:20 }}</p>
+                    <div><a href="{{ blog_post.get_absolute_url }}" class="w3-bottombar w3-border-blue">Read more →</a></div>
                     <br>
                 {% endfor %}
-                <div style="max-width: 300px" >
-                    <div style="height: 0;border: 0; border-top: 1px solid black; margin: 0; "></div>
-                </div>
                 <br>
-                <br>
-                <a href="/blog" class="w3-border-black w3-black w3-padding w3-round-xxlarge w3-hover-white w3-border">More posts</a>
+                <a href="/blog" class="w3-border-black w3-black w3-padding w3-hover-white w3-border w3-round-xxlarge">More posts</a>
             {% else %}
                 <br>
             {% endif %}
-            {#            <aside class="w3-padding-32">#}
-            {#                <h6 class="w3-opacity w3-large" style="text-transform: uppercase">Selected Projects</h6>#}
-            {#                <div class="w3-card-2 w3-padding-64 w3-red w3-margin-bottom w3-padding-large">#}
-            {#                </div>#}
-            {#                <div class="w3-card-2 w3-padding-64 w3-green w3-margin-bottom w3-padding-large">#}
-            {#                </div>#}
-            {#                <div class="w3-card-2 w3-padding-64 w3-blue w3-margin-bottom w3-padding-large">#}
-            {#                </div>#}
-            {#                <br><br>#}
-            {#                <h6 class="w3-opacity w3-large" style="text-transform: uppercase">Selected Posts</h6>#}
-            {#                {% if blog_posts %}#}
-            {#                    {% for blog_post in blog_posts %}#}
-            {#                        <a href="{{ blog_post.get_absolute_url }}">{{ blog_post.post_title }}</a>#}
-            {#                    {% endfor %}#}
-            {#                {% else %}#}
-            {#                {% endif %}#}
-            {#                <br>#}
-            {#            </aside>#}
+{#                        <aside class="w3-padding-32">#}
+{#                            <h6 class="w3-opacity w3-large" style="text-transform: uppercase">Selected Projects</h6>#}
+{#                            <div class="w3-card-2 w3-padding-64 w3-red w3-margin-bottom w3-padding-large">#}
+{#                            </div>#}
+{#                            <div class="w3-card-2 w3-padding-64 w3-green w3-margin-bottom w3-padding-large">#}
+{#                            </div>#}
+{#                            <div class="w3-card-2 w3-padding-64 w3-blue w3-margin-bottom w3-padding-large">#}
+{#                            </div>#}
+{#                            <br><br>#}
+{#                            <h6 class="w3-opacity w3-large" style="text-transform: uppercase">Selected Posts</h6>#}
+{#                            {% if blog_posts %}#}
+{#                                {% for blog_post in blog_posts %}#}
+{#                                    <a href="{{ blog_post.get_absolute_url }}">{{ blog_post.post_title }}</a>#}
+{#                                {% endfor %}#}
+{#                            {% else %}#}
+{#                            {% endif %}#}
+{#                            <br>#}
+{#                        </aside>#}
         </div>
-        <div class="w3-third">
+        <div class="w3-quarter">
             <br>
         </div>
     </div>
