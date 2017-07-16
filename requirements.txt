@@ -3,7 +3,12 @@ dj-database-url==0.4.1
 Django==1.11.1
 django-analytical==2.2.2
 django-livereload-server==0.2.3
+django-markdown-deux==1.0.5
 gunicorn==19.6.0
+Markdown==2.6.8
+markdown2==2.3.4
+olefile==0.44
+Pillow==4.2.1
 psycopg2==2.6.2
 pytz==2017.2
 six==1.10.0

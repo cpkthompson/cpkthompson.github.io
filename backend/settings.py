@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'blog',
     'livereload',
     'analytical',
+    'markdown_deux',
 ]
 
 MIDDLEWARE = [
