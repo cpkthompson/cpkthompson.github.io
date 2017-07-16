@@ -4,11 +4,11 @@
 
     <div class="w3-content w3-container w3-padding-32">
         <div class="w3-threequarter">
-            <div class="w3-text-grey w3-opacity w3-large" style="text-transform: uppercase">All Posts</div>
+            <h1 class="w3-jumbo" style="text-transform: uppercase">All Posts</h1>
             {% for blog_post in blog_posts %}
                 <h2><a href="{{ blog_post.get_absolute_url }}">{{ blog_post.post_title }}</a></h2>
                 <p>{{ blog_post.post_publish|date }}</p>
-                <p>{{ blog_post.post_body|truncatewords:30 }}</p>
+                <p class="w3-large">{{ blog_post.post_body|truncatewords:30 }}</p>
                 <div><a href="{{ blog_post.get_absolute_url }}" class="w3-bottombar w3-border-blue">Read more →</a></div>
                 <br>
             {% endfor %}
