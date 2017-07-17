@@ -3,13 +3,18 @@
 {% block content %}
 
     <div class="w3-content w3-container w3-padding-32">
+        <h1 class="w3-jumbo" style="text-transform: uppercase">Posts</h1>
+        <h1 class="w3-xxxlarge" style="opacity: 0.3">
+            Those few times I told you deep stuff and you agreed with everything I said
+        </h1>
+        <br>
         <div class="w3-threequarter">
-            <h1 class="w3-jumbo" style="text-transform: uppercase">All Posts</h1>
+
             {% for blog_post in blog_posts %}
-                <h2><a href="{{ blog_post.get_absolute_url }}">{{ blog_post.post_title }}</a></h2>
+                <h1><a href="{{ blog_post.get_absolute_url }}">{{ blog_post.post_title }}</a></h1>
                 <p>{{ blog_post.post_publish|date }}</p>
-                <p class="w3-large"  style="font-weight: bold">{{ blog_post.post_body|truncatewords:30 }}</p>
-                <div><a href="{{ blog_post.get_absolute_url }}" class="w3-bottombar w3-border-blue">Read more →</a></div>
+                <p class="w3-large">{{ blog_post.post_body|truncatewords:30 }}</p>
+                <div><a href="{{ blog_post.get_absolute_url }}">Read more →</a></div>
                 <br>
             {% endfor %}
         </div>

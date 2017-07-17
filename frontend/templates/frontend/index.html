@@ -1,39 +1,37 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% block content %}
-    <header class="w3-black w3-padding-large w3-padding-64">
+    <header class="w3-padding-large w3-padding-64 bgimg w3-bottombar w3-topbar w3-rightbar w3-leftbar w3-margin w3-border-black w3-card-2">
         <div class="w3-content w3-padding-16">
             <div class="w3-jumbo w3-hide-small" style="font-family: Raleway">
-                Hello, my name is <a href="/about" class="w3-opacity w3-hover-opacity-off w3-text-blue">Charles</a> and I'm in <span class="w3-red w3-padding" style="font-family: Raleway;text-transform: uppercase">love</span> with the web.
+                Hello, my name is <a href="/about" class="">Charles</a> and I love making things for the web.
             </div>
 
             <div class="w3-xxlarge w3-hide-large w3-hide-medium" style="font-family: Raleway">
-                Hello, my name is <a href="/about">Charles</a> and I'm in <span class="w3-text-red" style="font-family: Raleway;text-transform: uppercase">love</span> with the web.
+                Hello, my name is <a href="/about">Charles</a> and I love making things for the web.
             </div>
-            <hr style="width:100px;border:5px solid white;padding: 0px" class="w3-round-large">
-            <div class="w3-xlarge w3-opacity w3-padding-16">I’m currently an <a href="#">Entreprenuer-In-Training</a> at <a href="#">MEST</a> in Accra, Ghana.
+            <hr style="width:100px;border:5px solid #66676E;padding: 0px" class="w3-round-large">
+            <div class="w3-xlarge w3-padding-16">I’m currently an <a href="#">Entreprenuer-In-Training</a> at <a href="http://meltwater.org/">MEST</a> in Accra, Ghana.
             </div>
-            <div class="w3-xlarge w3-opacity">This is my personal website where I try write posts on a few interests of mine in Science & Technology, Design and Development.
-            </div>
-            <br>
-            <div  class="w3-xxlarge w3-center"><a href="#body"><i class="chevron circle down icon"></i></a>
+            <div class="w3-xlarge">This is my personal website where I try write posts on a few interests of mine in Science & Technology, Design and Development.
             </div>
         </div>
     </header>
     <br>
     <div id="body" class="w3-content w3-container w3-padding-8">
         <div class="w3-threequarter w3-padding-16">
-            <div class="w3-opacity w3-large" style="text-transform: uppercase">Recent Posts</div>
+            <h6 class="w3-opacity w3-large" style="text-transform: uppercase;font-weight: bold">Recent Posts</h6>
+            <br>
             {% if blog_posts %}
                 {% for blog_post in blog_posts %}
-                    <h2><a href="{{ blog_post.get_absolute_url }}">{{ blog_post.post_title }}</a></h2>
+                    <h1><a href="{{ blog_post.get_absolute_url }}">{{ blog_post.post_title }}</a></h1>
                     <p class="w3-opacity">{{ blog_post.post_publish|timesince }} ago</p>
-                    <p class="w3-large" style="font-weight: bold">{{ blog_post.post_body|truncatewords:30 }}</p>
-                    <div><a href="{{ blog_post.get_absolute_url }}" class="w3-bottombar w3-border-blue">Read more →</a></div>
+                    <p class="w3-large">{{ blog_post.post_body|truncatewords:30 }}</p>
+                    <div><a href="{{ blog_post.get_absolute_url }}" >Read more →</a></div>
+                    <br>
                     <br>
                 {% endfor %}
-                <br>
-                <a href="/blog" class="w3-border-black w3-black w3-padding w3-hover-white w3-border w3-round-xxlarge">More posts</a>
+                <h6 class="w3-large"><a href="/blog" class="w3-border-black w3-black w3-padding w3-hover-white w3-border" style="text-transform: uppercase">More posts</a></h6>
             {% else %}
                 <br>
             {% endif %}
