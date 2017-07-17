@@ -8,7 +8,7 @@
             {% for blog_post in blog_posts %}
                 <h2><a href="{{ blog_post.get_absolute_url }}">{{ blog_post.post_title }}</a></h2>
                 <p>{{ blog_post.post_publish|date }}</p>
-                <p class="w3-large">{{ blog_post.post_body|truncatewords:30 }}</p>
+                <p class="w3-large"  style="font-weight: bold">{{ blog_post.post_body|truncatewords:30 }}</p>
                 <div><a href="{{ blog_post.get_absolute_url }}" class="w3-bottombar w3-border-blue">Read more →</a></div>
                 <br>
             {% endfor %}
