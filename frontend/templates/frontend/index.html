@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 {% load staticfiles %}
+{% load comments %}
+{% load comments_xtd %}
 {% block content %}
-    <header class="w3-padding-large w3-padding-64 bgimg w3-bottombar w3-topbar w3-rightbar w3-leftbar w3-margin w3-border-black w3-card-2">
+    <header class="w3-padding-large w3-padding-64 bgimg w3-bottombar w3-border-black w3-card-2">
         <div class="w3-content w3-padding-16">
             <div class="w3-jumbo w3-hide-small" style="font-family: Raleway">
                 Hello, my name is <a href="/about" class="">Charles</a> and I love making things for the web.
@@ -25,34 +27,42 @@
             {% if blog_posts %}
                 {% for blog_post in blog_posts %}
                     <h1><a href="{{ blog_post.get_absolute_url }}">{{ blog_post.post_title }}</a></h1>
-                    <p class="w3-opacity">{{ blog_post.post_publish|timesince }} ago</p>
-                    <p class="w3-large">{{ blog_post.post_body|truncatewords:30 }}</p>
+                    <p class="w3-opacity" style="font-family: 'Share Tech Mono', monospace;">{{ blog_post.post_publish|timesince }} ago &nbsp;&bull;&nbsp; <a href="{{ blog_post.get_absolute_url }}#comment-section">{% get_comment_count for blog_post as comment_count %}{{ comment_count }} comments</a></p>
+                    <p class="w3-large">{{ blog_post.post_excerpt }}</p>
                     <div><a href="{{ blog_post.get_absolute_url }}" >Read more →</a></div>
+                        <br>
+
                     <br>
                     <br>
                 {% endfor %}
-                <h6 class="w3-large"><a href="/blog" class="    w3-border-black w3-black w3-padding w3-hover-white w3-border" style="text-transform: uppercase">More posts</a></h6>
+                <h6 class="w3-large"><a href="/blog" class="w3-border-black w3-black w3-padding w3-hover-white w3-border" style="text-transform: uppercase">More posts</a></h6>
             {% else %}
                 <br>
             {% endif %}
-{#                        <aside class="w3-padding-32">#}
-{#                            <h6 class="w3-opacity w3-large" style="text-transform: uppercase">Selected Projects</h6>#}
-{#                            <div class="w3-card-2 w3-padding-64 w3-red w3-margin-bottom w3-padding-large">#}
-{#                            </div>#}
-{#                            <div class="w3-card-2 w3-padding-64 w3-green w3-margin-bottom w3-padding-large">#}
-{#                            </div>#}
-{#                            <div class="w3-card-2 w3-padding-64 w3-blue w3-margin-bottom w3-padding-large">#}
-{#                            </div>#}
-{#                            <br><br>#}
-{#                            <h6 class="w3-opacity w3-large" style="text-transform: uppercase">Selected Posts</h6>#}
-{#                            {% if blog_posts %}#}
-{#                                {% for blog_post in blog_posts %}#}
-{#                                    <a href="{{ blog_post.get_absolute_url }}">{{ blog_post.post_title }}</a>#}
-{#                                {% endfor %}#}
-{#                            {% else %}#}
-{#                            {% endif %}#}
-{#                            <br>#}
-{#                        </aside>#}
+            <br>
+            <br>
+            {#            <aside class="w3-padding-32">#}
+            {#                <h6 class="w3-opacity w3-large" style="text-transform: uppercase;font-weight: bold">Selected Projects</h6>#}
+            {#                <br>#}
+            {#                <br>#}
+            {#                <div class="w3-card-2 w3-padding-64 w3-red w3-margin-bottom w3-padding-large">#}
+            {#                </div>#}
+            {#                <div class="w3-card-2 w3-padding-64 w3-green w3-margin-bottom w3-padding-large">#}
+            {#                </div>#}
+            {#                <div class="w3-card-2 w3-padding-64 w3-blue w3-margin-bottom w3-padding-large">#}
+            {#                </div>#}
+            {#                <br><br>#}
+            {#                <h6 class="w3-opacity w3-large" style="text-transform: uppercase;font-weight: bold">Selected Posts</h6>#}
+            {#                <br>#}
+            {#                <br>#}
+            {#                {% if blog_posts %}#}
+            {#                    {% for blog_post in blog_posts %}#}
+            {#                        <h2><a href="{{ blog_post.get_absolute_url }}">{{ blog_post.post_title }}</a></h2>#}
+            {#                    {% endfor %}#}
+            {#                {% else %}#}
+            {#                {% endif %}#}
+            {#                <br>#}
+            {#            </aside>#}
         </div>
         <div class="w3-quarter">
             <br>

@@ -2,9 +2,13 @@ beautifulsoup4==4.6.0
 dj-database-url==0.4.1
 Django==1.11.1
 django-analytical==2.2.2
+django-comments-xtd==2.0.3
+django-contrib-comments==1.8.0
 django-livereload-server==0.2.3
 django-markdown-deux==1.0.5
 django-markdownx==2.0.21
+djangorestframework==3.6.3
+docutils==0.13.1
 gunicorn==19.6.0
 Markdown==2.6.8
 markdown2==2.3.4

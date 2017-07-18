@@ -1,20 +1,26 @@
 {% extends "base.html" %}
 {% load staticfiles %}
+{% load comments %}
+{% load comments_xtd %}
 {% block content %}
-
     <div class="w3-content w3-container w3-padding-32">
-        <h1 class="w3-jumbo" style="text-transform: uppercase">Posts</h1>
-        <h1 class="w3-xxxlarge" style="opacity: 0.3">
+        <div class="w3-jumbo w3-text-black" style="text-transform: lowercase;font-family: Raleway"><a href="/">home </a>/ blog</div>
+        <div class="w3-xxxlarge w3-hide-small w3-padding-bottom" style="opacity: 0.3; font-family: Raleway">
             Those few times I told you deep stuff and you agreed with everything I said
-        </h1>
+        </div>
+        <div class="w3-xxlarge w3-hide-large w3-hide-medium w3-padding-bottom" style="opacity: 0.3; font-family: Raleway">
+            Those few times I told you deep stuff and you agreed with everything I said
+        </div>
         <br>
         <div class="w3-threequarter">
 
             {% for blog_post in blog_posts %}
                 <h1><a href="{{ blog_post.get_absolute_url }}">{{ blog_post.post_title }}</a></h1>
-                <p>{{ blog_post.post_publish|date }}</p>
-                <p class="w3-large">{{ blog_post.post_body|truncatewords:30 }}</p>
+                <p class="w3-opacity" style="font-family: 'Share Tech Mono', monospace;">{{ blog_post.post_publish|date }} ago &nbsp;&bull;&nbsp; <a href="{{ blog_post.get_absolute_url }}#comment-section">{% get_comment_count for blog_post as comment_count %}{{ comment_count }} comments</a></p>
+
+                <p class="w3-large">{{ blog_post.post_excerpt}}</p>
                 <div><a href="{{ blog_post.get_absolute_url }}">Read more →</a></div>
+                <br>
                 <br>
             {% endfor %}
         </div>

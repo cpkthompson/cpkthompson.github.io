@@ -9,14 +9,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSS -->
-    {#    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css">#}
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     {#    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">#}
     <link rel="stylesheet" type="text/css" href="{% static 'css/jonsuh.css' %}">
 
     <!-- Scripts -->
     <script type="text/javascript" src="{% static 'js/javascript.js' %}  "></script>
-    {#    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.js"></script>#}
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.js"></script>
 
     <!-- Font -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -34,8 +34,12 @@
         }
         @font-face {
             font-family: "Raleway";
-            src: url("{% static 'fonts/raleway-black.woff2' %}");
+            src: url("{% static 'fonts/CircularSpotifyHead-Bold.otf' %}");
         }
+{#        @font-face {#}
+{#            font-family: "Raleway";#}
+{#            src: url("{% static 'fonts/raleway-black.woff2' %}");#}
+{#        }#}
         @font-face {
             font-family: "Source San";
             src: url("{% static 'fonts/sourcesans.woff2' %}");
@@ -46,18 +50,37 @@
         }
 
         body, p, div, span {
-            font-family: "Source San";
+{#            font-family: "Source San";#}
+            font-family: "Gotham";
         }
         .bgimg{
             background-image: url({% static 'images/bg-confetti-2.svg' %});
-{#            background-color: #2b9cf2;#}
+                    background-color: #FDD692;
             size: 400px;
+        }
+        #id_comment {
+            height: 70px;
+            resize: none;
+            font-size: inherit;
+            width: 100%;
+            display: block;
+            margin-left: auto;
+            margin-right: 10px;
+        }
+
+        #id_comment:focus {
+            border: 3px solid #555;
+            height: 70px;
+            width: 100%;
+            display: block;
+            margin-left: auto;
+            margin-right: 10px;
         }
 
     </style>
 </head>
 
-<body>
+<body class="w3-bottombar w3-topbar w3-rightbar w3-leftbar w3-border-black">
 {% block content %}
 {% endblock %}
 <div class="w3-black w3-padding w3-padding-32">

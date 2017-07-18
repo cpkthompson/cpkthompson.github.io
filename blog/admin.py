@@ -5,7 +5,7 @@ from blog.models import BlogPost
 
 
 class BlogPostAdmin(admin.ModelAdmin):
-    list_display = ('post_title', 'post_slug', 'post_author', 'post_publish', 'post_status')
+    list_display = ('post_title', 'post_excerpt', 'post_author', 'post_publish', 'post_status')
     list_filter = ('post_status', 'post_created', 'post_publish', 'post_author')
     search_fields = ('post_title', 'post_body')
     prepopulated_fields = {'post_slug': ('post_title', )}
