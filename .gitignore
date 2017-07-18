@@ -9,3 +9,5 @@ blog/__pycache__/
 blog/migrations/__pycache__/
 db.sqlite3
 frontend/__pycache__/
+backend/settings/__pycache__/
+backend/settings/local.py
