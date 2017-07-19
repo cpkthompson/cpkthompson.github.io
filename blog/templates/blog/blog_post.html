@@ -26,13 +26,14 @@
                 <br>
 
                 {% render_comment_form for object %}
-
-                <div class="ui threaded comments" id="comment-section" >
-                    <h5 class="w3-opacity ui dividing header">COMMENTS<a>
-                        <div class="w3-right w3-opacity">Most Recent <i class="caret down icon"></i></div>
-                    </a></h5>
-                    {% render_xtdcomment_tree for object %}
-                </div>
+                {% if comment_count %}
+                    <div class="ui threaded comments" id="comment-section" >
+                        <h5 class="w3-opacity ui dividing header">COMMENTS<a>
+                            <div class="w3-right w3-opacity">Most Recent <i class="caret down icon"></i></div>
+                        </a></h5>
+                        {% render_xtdcomment_tree for object %}
+                    </div>
+                {% endif %}
             {% endwith %}
             <div class="w3-quarter w3-padding-16 w3-padding-large">
                 <br>
