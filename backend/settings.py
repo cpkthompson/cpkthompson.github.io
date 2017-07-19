@@ -14,7 +14,7 @@ import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 
 # Quick-start development settings - unsuitable for production
@@ -24,7 +24,13 @@ PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = "j7fq^4tlmobn0*&a-6_jy=e0(na07t*r$4nkb5kumqpvdji336"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+
+# settings that are not environment dependent
+try:
+    from backend.local_settings import *
+except ImportError:
+    pass
 
 # Application definition
 
@@ -45,15 +51,15 @@ INSTALLED_APPS = [
     'livereload',
     'analytical',
     'markdown_deux',
-    # 'django_comments_xtd',
-    # 'django_comments',
+    'django_comments_xtd',
+    'django_comments',
 ]
-# COMMENTS_XTD_MAX_THREAD_LEVEL = 10
-#
-# COMMENTS_APP = 'django_comments_xtd'
-# COMMENTS_XTD_LIST_ORDER = ('-thread_id', 'order')
-# COMMENTS_XTD_CONFIRM_EMAIL = False
-# SITE_ID = 1
+COMMENTS_XTD_MAX_THREAD_LEVEL = 10
+
+COMMENTS_APP = 'django_comments_xtd'
+COMMENTS_XTD_LIST_ORDER = ('-thread_id', 'order')
+COMMENTS_XTD_CONFIRM_EMAIL = False
+SITE_ID = 1
 
 
 EMAIL_HOST = "smtp.mail.com"
