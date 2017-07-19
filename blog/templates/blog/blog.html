@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load staticfiles %}
-{% load comments %}
-{% load comments_xtd %}
+{#{% load comments %}#}
+{#{% load comments_xtd %}#}
 {% block content %}
     <div class="w3-content w3-container w3-padding-32">
         <div class="w3-jumbo w3-text-black" style="text-transform: lowercase;font-family: Raleway"><a href="/">home </a>/ blog /</div>
@@ -16,7 +16,7 @@
 
             {% for blog_post in blog_posts %}
                 <h1><a href="{{ blog_post.get_absolute_url }}">{{ blog_post.post_title }}</a></h1>
-                <p class="w3-opacity" style="font-family: 'Share Tech Mono', monospace;">{{ blog_post.post_publish|date }} ago &nbsp;&bull;&nbsp; <a href="{{ blog_post.get_absolute_url }}#comment-section">{% get_comment_count for blog_post as comment_count %}{{ comment_count }} comments</a></p>
+{#                <p class="w3-opacity" style="font-family: 'Share Tech Mono', monospace;">{{ blog_post.post_publish|date }} ago &nbsp;&bull;&nbsp; <a href="{{ blog_post.get_absolute_url }}#comment-section">{% get_comment_count for blog_post as comment_count %}{{ comment_count }} comments</a></p>#}
 
                 <p class="w3-large">{{ blog_post.post_excerpt}}</p>
                 <div><a href="{{ blog_post.get_absolute_url }}">Read more →</a></div>

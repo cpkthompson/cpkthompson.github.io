@@ -20,6 +20,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('frontend.urls', namespace='frontend', app_name='frontend')),
     url(r'^blog/', include('blog.urls', namespace='blog', app_name='blog')),
-    url(r'^comments/', include('django_comments_xtd.urls')),
+    # url(r'^comments/', include('django_comments_xtd.urls')),
 
 ]

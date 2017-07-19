@@ -45,15 +45,15 @@ INSTALLED_APPS = [
     'livereload',
     'analytical',
     'markdown_deux',
-    'django_comments_xtd',
-    'django_comments',
+    # 'django_comments_xtd',
+    # 'django_comments',
 ]
-COMMENTS_XTD_MAX_THREAD_LEVEL = 10
-
-COMMENTS_APP = 'django_comments_xtd'
-COMMENTS_XTD_LIST_ORDER = ('-thread_id', 'order')
-COMMENTS_XTD_CONFIRM_EMAIL = False
-SITE_ID = 1
+# COMMENTS_XTD_MAX_THREAD_LEVEL = 10
+#
+# COMMENTS_APP = 'django_comments_xtd'
+# COMMENTS_XTD_LIST_ORDER = ('-thread_id', 'order')
+# COMMENTS_XTD_CONFIRM_EMAIL = False
+# SITE_ID = 1
 
 
 EMAIL_HOST = "smtp.mail.com"
