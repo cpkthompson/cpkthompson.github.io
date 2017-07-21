@@ -35,10 +35,10 @@
             font-family: "Raleway";
             src: url("{% static 'fonts/CircularSpotifyHead-Bold.otf' %}");
         }
-{#        @font-face {#}
-{#            font-family: "Raleway";#}
-{#            src: url("{% static 'fonts/raleway-black.woff2' %}");#}
-{#        }#}
+        {#        @font-face {#}
+        {#            font-family: "Raleway";#}
+        {#            src: url("{% static 'fonts/raleway-black.woff2' %}");#}
+        {#        }#}
 
         h1, h2, h3, h4, h5, h6 {
             font-family: Raleway;
@@ -50,7 +50,10 @@
         .bgimg{
             background-image: url({% static 'images/bg-confetti-2.svg' %});
             background-color: #FDD692;
-            size: 400px;
+{#            background-size: 400px;#}
+            background-position: center;
+            background-size: cover;
+
         }
         #id_comment {
             height: 70px;
@@ -75,13 +78,12 @@
 </head>
 
 <body>
+
 {% block content %}
 {% endblock %}
-<div class="w3-black w3-padding w3-padding-32">
-    <div class="w3-content w3-padding-32 w3-text-dark-grey w3-opacity">
-        You're currently viewing a beta build of this site and as such, isn't perfect. Site also uses cookies and unless you're the cookie monster, there's no need to worry about them.
-        <br><br>
-        <div class="w3-left w3-opacity">© 2017 Charles Thompson. All rights reserved</div>
+<div class="w3-black">
+    <div class="w3-padding-large w3-center w3-opacity">
+        You're currently viewing a beta build of this site still under development and as such, isn't perfect. Site also uses cookies and unless you're the cookie monster, there's no need to worry about them.
     </div>
 </div>
 
