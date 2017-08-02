@@ -2,80 +2,40 @@
 {% load staticfiles %}
 {% block content %}
     <header class="w3-padding-large w3-padding-64 bgimg w3-display-container">
-        <br>
-        <div class="w3-content w3-padding-32">
+        <div class="w3-content w3-padding-64">
             <div class="w3-jumbo w3-hide-small" style="font-family: Raleway">
-                Hello, my name is <a href="/about" class="w3-bottombar w3-border-light-blue">Charles</a> and I love <a href="#" class="w3-bottombar w3-border-light-blue">making</a> things for the web.
+                Hello, my name is <a href="/about" class="w3-bottombar w3-border-light-blue">Charles</a> and I love <a
+                    href="#" class="w3-bottombar w3-border-light-blue">making</a> things for the web.
             </div>
-
             <div class="w3-xxxlarge w3-hide-large w3-hide-medium" style="font-family: Raleway">
-                Hello, my name is <a href="/about" class="w3-bottombar w3-border-light-blue">Charles</a> and I love <a href="#" class="w3-bottombar w3-border-light-blue">making</a> things for the web.
+                Hello, my name is <a href="/about" class="w3-bottombar w3-border-light-blue">Charles</a> and I love <a
+                    href="#" class="w3-bottombar w3-border-light-blue">making</a> things for the web.
             </div>
             <hr style="width:150px;border:5px solid black;padding: 0px" class="w3-round-large">
-            <div class="w3-padding-16 w3-xlarge">I’m currently an Entreprenuer-In-Training at <a href="http://meltwater.org/" class="w3-bottombar w3-border-light-blue">MEST</a> in Accra, Ghana.
+            <div class="w3-padding-16 w3-xlarge">
+                I’m currently an Entreprenuer-In-Training at <a
+                    href="http://meltwater.org/" class="w3-bottombar w3-border-light-blue">MEST</a> in Accra, Ghana.
             </div>
-{#            <div class="w3-padding-16 w3-xlarge">Also recently started a blog at <a href="https://cpkthompson.github.io" class="w3-bottombar w3-border-light-blue">digitalheartist.io</a> where I share knowledge about Web Development.#}
-{#            </div>#}
+            <div class="w3-padding-16 w3-xlarge">
+                This is my personal website and it's still relatively new so please be
+                gentle. It’s also a playground for me so I’m constantly trying new stuff, making changes, and probably breaking things.
+            </div>
+            <div class="w3-padding-16 w3-large">
+                It was created using HTML, CSS, and JavaScript using Django; carefully hand-coded in Pycharm and hosted on Heroku because it was free. Deployed in a continuous integration fashion because Facebook bragged about it and why not? This was done with the help of GitHub. The codebase is version-controlled by Git and also managed on GitHub. The type is set in beautiful Karla and Raleway, all served by Google Fonts.
+            </div>
             <hr>
-            <div class="w3-xlarge w3-padding-16">
-                <a href="https://twitter.com/cpkthompson" target="_blank" class="w3-hover-opacity-off"><i class="fa fa-2x fa-twitter" style="color:#1da1f2;"></i></a>&nbsp;&nbsp;&nbsp;
-                <a href="https://www.facebook.com/cpkthompson" target="_blank" class="w3-hover-opacity-off"><i class="fa fa-2x fa-facebook-square" style="color:#3b5998;"></i></a>&nbsp;&nbsp;&nbsp;
-                <a href="https://instagram.com/cpkthompson" target="_blank" class="w3-hover-opacity-off"><i class="fa fa-2x fa-instagram" style="color:#e1306c;"></i></a>&nbsp;&nbsp;&nbsp;
-                <a href="https://github.com/cpkthompson" target="_blank" class="w3-hover-opacity-off"><i class="fa fa-2x fa-github" style="color:black;"></i></a>&nbsp;&nbsp;&nbsp;
-                {#                <a href="https://dribbble.com/cpkthompson" target="_blank"><i class="fa fa-2x fa-dribbble" style="color:#ea4c89;"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;#}
+            <div class="w3-xlarge">
+                <a href="https://twitter.com/cpkthompson" target="_blank" class="w3-hover-opacity-off"><i
+                        class="fa fa-2x fa-twitter" style="color:#1da1f2;"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://instagram.com/cpkthompson" target="_blank" class="w3-hover-opacity-off"><i
+                        class="fa fa-2x fa-instagram" style="color:#e1306c;"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://www.facebook.com/cpkthompson" target="_blank" class="w3-hover-opacity-off"><i
+                        class="fa fa-2x fa-facebook-square" style="color:#3b5998;"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://github.com/cpkthompson" target="_blank" class="w3-hover-opacity-off"><i
+                        class="fa fa-2x fa-github" style="color:black;"></i></a>&nbsp;&nbsp;&nbsp;
                 <br>
             </div>
 
         </div>
     </header>
-    {#    <div id="body" class="w3-content w3-container w3-padding-8">#}
-    {#        <div class="w3-threequarter w3-padding-16">#}
-    {#            <h6 class="w3-opacity w3-large" style="text-transform: uppercase;font-weight: bold">Recent Posts</h6>#}
-    {#            <br>#}
-    {#            {% if blog_posts %}#}
-    {#                {% for blog_post in blog_posts %}#}
-    {#                    <h1><a href="{{ blog_post.get_absolute_url }}">{{ blog_post.post_title }}</a></h1>#}
-    {#                    <p class="w3-opacity" style="font-family: 'Share Tech Mono', monospace;">{{ blog_post.post_publish|timesince }}#}
-    {#                    <p class="w3-large">{{ blog_post.post_excerpt }}</p>#}
-    {#                    <div><a href="{{ blog_post.get_absolute_url }}" >Read more →</a></div>#}
-    {#                        <br>#}
-    {##}
-    {#                    <br>#}
-    {#                    <br>#}
-    {#                {% endfor %}#}
-    {#                <div class="w3-large"><a href="/blog" class="w3-border-black w3-black w3-padding w3-hover-white w3-border w3-round-xxlarge">More posts</a></div>#}
-    {#            {% else %}#}
-    {#                <br>#}
-    {#            {% endif %}#}
-    {#            <br>#}
-    {#            <br>#}
-    {#            <aside class="w3-padding-32">#}
-    {#                <h6 class="w3-opacity w3-large" style="text-transform: uppercase;font-weight: bold">Selected Projects</h6>#}
-    {#                <br>#}
-    {#                <br>#}
-    {#                <div class="w3-card-2 w3-padding-64 w3-red w3-margin-bottom w3-padding-large">#}
-    {#                </div>#}
-    {#                <div class="w3-card-2 w3-padding-64 w3-green w3-margin-bottom w3-padding-large">#}
-    {#                </div>#}
-    {#                <div class="w3-card-2 w3-padding-64 w3-blue w3-margin-bottom w3-padding-large">#}
-    {#                </div>#}
-    {#                <br><br>#}
-    {#                <h6 class="w3-opacity w3-large" style="text-transform: uppercase;font-weight: bold">Selected Posts</h6>#}
-    {#                <br>#}
-    {#                <br>#}
-    {#                {% if blog_posts %}#}
-    {#                    {% for blog_post in blog_posts %}#}
-    {#                        <h2><a href="{{ blog_post.get_absolute_url }}">{{ blog_post.post_title }}</a></h2>#}
-    {#                    {% endfor %}#}
-    {#                {% else %}#}
-    {#                {% endif %}#}
-    {#                <br>#}
-    {#            </aside>#}
-    {#        </div>#}
-    {#        <div class="w3-quarter">#}
-    {#            <br>#}
-    {#        </div>#}
-    {#    </div>#}
-    {#    <br>#}
-    {#    <br>#}
 {% endblock %}
