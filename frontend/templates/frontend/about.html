@@ -3,7 +3,10 @@
 {% block content %}
 
     <div class="w3-content w3-container w3-padding-32">
-        <div class="w3-jumbo w3-text-black" style="text-transform: lowercase;font-family: Raleway"><a href="/">home</a>
+        <div class="w3-jumbo w3-text-black  w3-hide-small" style="text-transform: lowercase;font-family: Raleway"><a href="/">home</a>
+            / About
+        </div>
+        <div class="w3-xxxlarge w3-text-black w3-hide-large w3-hide-medium" style="text-transform: lowercase;font-family: Raleway"><a href="/">home</a>
             / About
         </div>
         <div class="w3-xxxlarge w3-hide-small w3-padding-bottom" style="opacity: 0.3; font-family: Raleway">
@@ -14,78 +17,48 @@
             How about more than a cursory introduction?
         </div>
         <br>
-        <div class="w3-threequarter w3-large">
+        <div class="w3-threequarter">
+            <div class="w3-large">
 
-            Hi! 👋
-            <img src="{% static 'images/cpkthompson.jpg' %}" alt="" class="w3-circle w3-right w3-padding w3-hide-small"
-                 style="max-height: 200px">
-            <img src="{% static 'images/cpkthompson.jpg' %}" alt=""
-                 class="w3-circle w3-right w3-padding w3-hide-large w3-hide-medium" style="max-height: 150px">
-            <br>
-            <br>
-            My name is Charles Thompson and I’m terribly sorry if you’re tired of seeing this name or my <a
-                href="//twitter.com/cpkthompson">not so hilarious tweets</a>. I only promise you more of each.
-            <br>
-            <br>
-            Okay okay so myself? I’m a junior developer, and what that means to me is: I play a lot with beginner code
-            and haven’t really done anything substantial. I’ve done a few projects
-            <a href="//github.com/cpkthompson">here and there</a> , but you know, they’re all playground stuff.
-            <br>
-            <br>
-            I’m also a design enthusiast and I only started saying this to look cool but eventually trapped myself into
-            actually liking design. Design means a lot to different people so I’ll clarify the particular type I’m
-            interested in later (if ‘later’ wasn’t a hyperlink then ask me on Twitter)
-            <br>
-            <br>
-            I live in <a href="https://en.wikipedia.org/wiki/Accra">Accra, Ghana</a>. A developing West African Nation
-            about to take on the world. I attended <a href="https://www.ug.edu.gh/">University of Ghana</a> for my
-            parents and <a href="https://www.ug.edu.gh/">Sikkim Manipal University</a> - DE for myself. LOL etcetera
-            etcetera.
-            <br>
-            <br>
-            I’m very interested in systems, processes and the meta details of how things become what they are. Also the
-            biggest science and technology aficionado alive with an even more honest way of saying it being: I’m
-            addicted to technology and don’t think staring at screens 24/7 is a bad thing. That said, you’ll be
-            surprised to know Black Mirror (and Game of Thrones 😉) are my all time favorite TV shows and I’m open to <a
-                href="https://twitter.com/cpkthompson">discussion</a> about them any time of the day!
-            <br>
-            <br>
+                Hi! 👋
+                <img src="{% static 'images/cpkthompson.jpg' %}" alt="" class="w3-circle w3-right w3-padding w3-hide-small"
+                     style="max-height: 200px">
+                <img src="{% static 'images/cpkthompson.jpg' %}" alt=""
+                     class="w3-circle w3-right w3-padding w3-hide-large w3-hide-medium" style="max-height: 150px">
+                <br>
+                <br>
+                My name is Charles Thompson and I’m terribly sorry if you’re tired of seeing this name or my <a
+                    href="//twitter.com/cpkthompson">not so hilarious tweets</a>. I only promise you more of each.
+                <br>
+                <br>
+                Okay okay so myself? I’m a junior developer, and what that means to me is: I play a lot with beginner code
+                and haven’t really done anything substantial. I’ve done a few projects
+                <a href="//github.com/cpkthompson">here and there</a> , but you know, they’re all playground stuff.
+                <br>
+                <br>
+                I’m also a design enthusiast and I only started saying this to look cool but eventually trapped myself into
+                actually liking design. Design means a lot to different people so I’ll clarify the particular type I’m
+                interested in later (if ‘later’ wasn’t a hyperlink then ask me on Twitter)
+                <br>
+                <br>
+                I live in <a href="https://en.wikipedia.org/wiki/Accra">Accra, Ghana</a>. A developing West African Nation
+                about to take on the world. I attended <a href="https://www.ug.edu.gh/">University of Ghana</a> for my
+                parents and <a href="https://www.ug.edu.gh/">Sikkim Manipal University</a> - DE for myself. LOL etcetera
+                etcetera.
+                <br>
+                <br>
+                I’m very interested in systems, processes and the meta details of how things become what they are. Also the
+                biggest science and technology aficionado alive with an even more honest way of saying it being: I’m
+                addicted to technology and don’t think staring at screens 24/7 is a bad thing. That said, you’ll be
+                surprised to know Black Mirror (and Game of Thrones 😉) are my all time favorite TV shows and I’m open to <a
+                    href="https://twitter.com/cpkthompson">discussion</a> about them any time of the day!
 
-{#            <h1>About this site</h1>#}
-{#            This site is created using HTML, CSS, and JavaScript; carefully hand-coded in Sublime Text; compiled by#}
-{#            Sass, Jekyll and Grunt; hosted on a DigitalOcean instance running Nginx; and deployed in Terminal with the#}
-{#            help of a custom Capistrano recipe.#}
-{#            <br>#}
-{#            <br>#}
-{#            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate dignissimos dolor, doloremque#}
-{#            dolorum eaque expedita hic iure, iusto non quas quasi qui rerum sint, voluptate? Assumenda eum illum#}
-{#            incidunt?#}
-{#            <br>#}
-{#            <br>#}
-{#            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, aliquam aliquid, animi blanditiis consequuntur#}
-{#            facilis, laudantium magni maiores natus odio qui quos sed soluta ut vel voluptates voluptatibus? Dolores,#}
-{#            voluptates.#}
-{#            <br>#}
-{#            <br>#}
-{#            This site is designed to be future-friendly, so please forgive me if it doesn’t play or work well on older#}
-{#            browsers. As time goes on, I may roll out patches to improve support but no guarantees. It’s also a#}
-{#            playground for me so I’m constantly trying new stuff, making changes, and probably breaking things.#}
-{#            <br>#}
-{#            <br>#}
-{#            <h1>Find me</h1>#}
-{#            I limit myself to 140 characters <a href="https://twitter.com/cpkthompson">over here</a> and upload nice#}
-{#            pictures <a href="https://instagram.com/cpkthompson">over here</a> for the love of my life to see.#}
-{#            <br>#}
-{#            <br>#}
-{#            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aperiam beatae inventore magni molestias nam#}
-{#            necessitatibus quia, repellat velit! Eaque incidunt molestiae necessitatibus perferendis quod saepe#}
-{#            similique soluta sunt voluptatibus?#}
-            <br>
+            </div>
+        </div>
+        <div class="w3-quarter">
             <br>
         </div>
-        <div class="w3-quarter w3-padding-16 w3-padding-large">
-            <br>
-        </div>
+
     </div>
 {% endblock %}
 
