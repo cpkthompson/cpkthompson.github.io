@@ -5,8 +5,8 @@ staticfiles
 .idea/
 backend/__pycache__/
 backend/local_settings.py
-blog/__pycache__/
-blog/migrations/__pycache__/
+work/templates/work/__pycache__/
+work/templates/work/migrations/__pycache__/
 db.sqlite3
 frontend/__pycache__/
 backend/settings/__pycache__/
