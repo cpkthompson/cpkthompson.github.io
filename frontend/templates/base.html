@@ -7,7 +7,7 @@
     <title>Charles Thompson</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-       <!-- CSS -->
+    <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
@@ -17,15 +17,11 @@
 
     <!-- Font -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:900" rel="stylesheet">
     <style>
-
-        @font-face {
-            font-family: "Raleway";
-            src: url("{% static 'fonts/raleway-black.woff2' %}");
-        }
         h1, h2, h3, h4, h5, h6 {
-            font-family: Raleway;
+            font-family: 'Raleway', sans-serif;
         }
 
         body, p, div, span {
@@ -33,11 +29,10 @@
             font-size: 18px;
         }
         a{
-            border-bottom: 1px blue;
+            border-bottom: 1.3px solid #30A9DE;
         }
         .bgimg{
             background-image: url({% static 'images/bg-confetti-2.svg' %});
-            background-color: #FDD692;
             background-size: 400px;
             background-position: center;
             background-size: cover;
@@ -48,7 +43,7 @@
     </style>
 </head>
 
-<body>
+<body class="w3-bottombar w3-leftbar w3-rightbar w3-topbar w3-border-blue">
 
 {% block content %}
 {% endblock %}
