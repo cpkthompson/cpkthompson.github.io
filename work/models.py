@@ -10,7 +10,7 @@ class PublishedManager(models.Manager):
                 .filter(post_status='published')
 
 
-class BlogPost(models.Model):
+class WorkPost(models.Model):
     STATUS_CHOICES = (
             ('draft', 'Draft'),
             ('published', 'Published'),
@@ -36,6 +36,6 @@ class BlogPost(models.Model):
         return self.post_title
 
     def get_absolute_url(self):
-        return reverse('blog:blog_post_detail', args=[self.post_slug])
+        return reverse('work:work_post_detail', args=[self.post_slug])
 
 

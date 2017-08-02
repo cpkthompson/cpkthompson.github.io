@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+    <div class="w3-content w3-container w3-padding-32">
+        <div class="w3-jumbo w3-text-black w3-hide-small" style="text-transform: lowercase;font-family: Raleway"><a href="/">home</a> / work </div>
+        <div class="w3-xxxlarge w3-text-black w3-hide-large w3-hide-medium" style="text-transform: lowercase;font-family: Raleway"><a href="/">home </a>/ work </div>
+        <div class="w3-xxxlarge w3-hide-small w3-padding-bottom" style="opacity: 0.3; font-family: Raleway">
+            A few fun projects and freelance work I've done over the years
+        </div>
+        <div class="w3-xxlarge w3-hide-large w3-hide-medium w3-padding-bottom" style="opacity: 0.3; font-family: Raleway">
+            A few fun projects and freelance work I've done over the years
+        </div>
+        <br>
+        <div class="w3-threequarter">
+
+            {% for work_post in work_posts %}
+                <div class="w3-padding-large w3-border w3-padding-64 w3-dark-grey">
+                    <h1><a href="{{ work_post.get_absolute_url }}">{{ work_post.post_title }}</a></h1>
+                    <p class="w3-large">{{ work_post.post_excerpt}}</p>
+                    <div><a href="{{ work_post.get_absolute_url }}" class="w3-border w3-border-white w3-btn w3-white w3-hover-none">View</a></div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="w3-quarter w3-padding-16 w3-padding-large">
+            <br>
+        </div>
+    </div>
+{% endblock %}
+

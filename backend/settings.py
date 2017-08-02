@@ -41,28 +41,16 @@ INSTALLED_APPS = [
     # greater consistency between gunicorn and `./manage.py runserver`. See:
     # http://whitenoise.evans.io/en/stable/django.html#using-whitenoise-in-development
     'frontend',
-    'blog',
+    'work',
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'livereload',
     'analytical',
     'markdown_deux',
-    'django_comments_xtd',
-    'django_comments',
+
 ]
-COMMENTS_XTD_MAX_THREAD_LEVEL = 10
 
-COMMENTS_APP = 'django_comments_xtd'
-COMMENTS_XTD_LIST_ORDER = ('-thread_id', 'order')
-COMMENTS_XTD_CONFIRM_EMAIL = False
 SITE_ID = 1
-
-
-EMAIL_HOST = "smtp.mail.com"
-EMAIL_PORT = "587"
-EMAIL_HOST_USER = "charles@buyreadlove.com"
-EMAIL_HOST_PASSWORD = "Password007"
-DEFAULT_FROM_EMAIL = "charles@buyreadlove.com"
 
 
 MIDDLEWARE = [
