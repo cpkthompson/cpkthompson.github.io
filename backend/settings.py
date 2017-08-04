@@ -23,8 +23,13 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = "j7fq^4tlmobn0*&a-6_jy=e0(na07t*r$4nkb5kumqpvdji336"
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+import socket
+if socket.gethostname() == 'DESKTOP-78DDSQ9':
+    DEBUG = TEMPLATE_DEBUG = True
+    ALLOWED_HOSTS = ['*']
+else:
+    DEBUG = TEMPLATE_DEBUG = False
+    ALLOWED_HOSTS = ['.herokuapp.com']
 
 
 
@@ -128,8 +133,6 @@ DATABASES['default'].update(db_from_env)
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-# Allow all host headers
-ALLOWED_HOSTS = ['*']
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
@@ -146,8 +149,8 @@ STATICFILES_DIRS = [
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-# settings that are not environment dependent
-try:
-    from .local_settings import *
-except ImportError:
-    pass
+import socket
+if socket.gethostname() == 'DESKTOP-78DDSQ9':
+    DEBUG = TEMPLATE_DEBUG = True
+else:
+    DEBUG = TEMPLATE_DEBUG = False
