@@ -28,7 +28,7 @@ if socket.gethostname() == 'DESKTOP-78DDSQ9':
     DEBUG = TEMPLATE_DEBUG = True
     ALLOWED_HOSTS = ['*']
 else:
-    DEBUG = TEMPLATE_DEBUG = False
+    DEBUG = TEMPLATE_DEBUG = True
     ALLOWED_HOSTS = ['*']
 
 
