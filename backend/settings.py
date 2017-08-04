@@ -29,7 +29,7 @@ SECRET_KEY = "j7fq^4tlmobn0*&a-6_jy=e0(na07t*r$4nkb5kumqpvdji336"
 #     ALLOWED_HOSTS = ['*']
 # else:
 
-DEBUG = TEMPLATE_DEBUG = False
+DEBUG = False
 ALLOWED_HOSTS = ['*']
 
 
