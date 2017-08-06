@@ -25,11 +25,11 @@ SECRET_KEY = "j7fq^4tlmobn0*&a-6_jy=e0(na07t*r$4nkb5kumqpvdji336"
 import socket
 
 if socket.gethostname() == 'DESKTOP-78DDSQ9':
-    DEBUG = False
+    DEBUG = True
     ALLOWED_HOSTS = ['*']
 else:
     DEBUG = False
-    ALLOWED_HOSTS = ['*']
+    ALLOWED_HOSTS = ['.herokuapp.com']
 
 
 
