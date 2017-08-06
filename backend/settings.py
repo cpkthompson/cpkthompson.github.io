@@ -23,12 +23,13 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = "j7fq^4tlmobn0*&a-6_jy=e0(na07t*r$4nkb5kumqpvdji336"
 import socket
+
 if socket.gethostname() == 'DESKTOP-78DDSQ9':
-    DEBUG = True
+    DEBUG = False
     ALLOWED_HOSTS = ['*']
 else:
-    DEBUG = True
-    ALLOWED_HOSTS = ['*']
+    DEBUG = False
+    ALLOWED_HOSTS = ['.herokuapp.com']
 
 
 
@@ -148,4 +149,4 @@ STATICFILES_DIRS = [
 
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
