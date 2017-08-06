@@ -29,7 +29,7 @@ if socket.gethostname() == 'DESKTOP-78DDSQ9':
     ALLOWED_HOSTS = ['*']
 else:
     DEBUG = False
-    ALLOWED_HOSTS = ['.herokuapp.com']
+    ALLOWED_HOSTS = ['*']
 
 
 
@@ -47,13 +47,16 @@ INSTALLED_APPS = [
     # Disable Django's own staticfiles handling in favour of WhiteNoise, for
     # greater consistency between gunicorn and `./manage.py runserver`. See:
     # http://whitenoise.evans.io/en/stable/django.html#using-whitenoise-in-development
-    'frontend',
-    'work',
+   
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
+
     'livereload',
     'analytical',
     'markdown_deux',
+
+    'frontend',
+    'work',
 
 ]
 
@@ -150,3 +153,4 @@ STATICFILES_DIRS = [
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
