@@ -25,10 +25,10 @@ SECRET_KEY = "j7fq^4tlmobn0*&a-6_jy=e0(na07t*r$4nkb5kumqpvdji336"
 import socket
 
 if socket.gethostname() == 'DESKTOP-78DDSQ9':
-    DEBUG = True
+    DEBUG = False
     ALLOWED_HOSTS = ['*']
 else:
-    DEBUG = False
+    DEBUG = True
     ALLOWED_HOSTS = ['*']
 
 
@@ -152,4 +152,13 @@ STATICFILES_DIRS = [
 
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+#corrections after running manage.py check --deploy
+SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_BROWSER_XSS_FILTER = True
+# SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+CSRF_COOKIE_HTTPONLY = True
+X_FRAME_OPTIONS = 'DENY'
