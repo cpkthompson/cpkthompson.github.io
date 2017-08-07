@@ -1,6 +1,6 @@
 beautifulsoup4==4.6.0
 dj-database-url==0.4.1
-Django==1.10.6
+Django==1.11.1
 django-analytical==2.2.2
 django-comments-xtd==2.0.3
 django-contrib-comments==1.8.0
