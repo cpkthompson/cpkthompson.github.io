@@ -28,7 +28,7 @@ if socket.gethostname() == 'DESKTOP-78DDSQ9':
     DEBUG = True
     ALLOWED_HOSTS = ['*']
 else:
-    DEBUG = False
+    DEBUG = True
     ALLOWED_HOSTS = ['.herokuapp.com']
 
 
