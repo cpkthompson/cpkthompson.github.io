@@ -49,9 +49,11 @@ INSTALLED_APPS = [
     'livereload',
     'analytical',
     'markdown_deux',
+    'letsencrypt',
 
     'frontend',
     'work',
+
 
 ]
 
