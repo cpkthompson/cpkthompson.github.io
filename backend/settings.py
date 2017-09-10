@@ -53,10 +53,21 @@ INSTALLED_APPS = [
 
     'frontend',
     'work',
+    'pwa',
 
 
 ]
-
+PWA_APP_NAME = 'cpkthompson.com'
+PWA_APP_DESCRIPTION = "Hello, I'm Charles and I love making things for the web."
+PWA_APP_THEME_COLOR = '#0A0302'
+PWA_APP_DISPLAY = 'standalone'
+PWA_APP_START_URL = '/'
+# PWA_APP_ICONS = [
+#     {
+#         'src': '/static/images/my_app_icon.png',
+#         'sizes': '160x160'
+#     }
+# ]
 SITE_ID = 1
 
 
