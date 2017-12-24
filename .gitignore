@@ -2,3 +2,13 @@ venv
 *.pyc
 staticfiles
 .env
+/.idea/
+.idea/cpkthompson.github.io.iml
+.idea/inspectionProfiles/
+.idea/libraries/
+.idea/misc.xml
+.idea/modules.xml
+.idea/workspace.xml
+/frontend/templates/frontend/about.backup.html
+/frontend/templates/frontend/index.backup.html
+/db.sqlite3

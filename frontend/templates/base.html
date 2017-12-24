@@ -1,5 +1,4 @@
-{% load staticfiles %}
-{% load pwa %}
+{% load staticfiles static %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,16 +6,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Charles Thompson</title>
-    {% progressive_web_app_meta %}
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- CSS -->
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
-    <!-- Scripts -->
-
-    <!-- Font -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'frontend/css/w.css' %}">
+    <link rel="stylesheet" href="{% static 'frontend/css/b.min.css' %}">
+    <link rel="stylesheet" href="{% static 'frontend/css/font-awesome.min.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'frontend/images/favicon.ico' %}">
     <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:900" rel="stylesheet">
     <style>
@@ -29,6 +24,21 @@
         }
         a{
             border-bottom: 1.3px solid #30A9DE;
+        }
+
+        .stick-it {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 1020;
+            overflow: auto
+        }
+
+        .bgimg {
+            background-image: url("{% static 'frontend/images/bg-confetti-2.svg'%}");
+            background-position: center;
+            background-size: cover;
+
         }
 
     </style>
