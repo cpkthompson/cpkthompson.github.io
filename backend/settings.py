@@ -24,12 +24,12 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 SECRET_KEY = "j7fq^4tlmobn0*&a-6_jy=e0(na07t*r$4nkb5kumqpvdji336"
 import socket
 
-if socket.gethostname() == 'DESKTOP-78DDSQ9':
+if socket.gethostname() == 'cpkthompson':
     DEBUG = True
     ALLOWED_HOSTS = ['*']
 else:
-    DEBUG = True
-    ALLOWED_HOSTS = ['*']
+    DEBUG = False
+    ALLOWED_HOSTS = ['.herokuapp.com', '.github.io', '.github.com']
 
 
 
@@ -49,7 +49,6 @@ INSTALLED_APPS = [
     'livereload',
     'analytical',
     'markdown_deux',
-    'letsencrypt',
 
     'frontend',
     'work',
