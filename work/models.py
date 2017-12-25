@@ -1,4 +1,5 @@
 from django.db import models
+from taggit.managers import TaggableManager
 
 
 class Work(models.Model):
@@ -7,6 +8,7 @@ class Work(models.Model):
     excerpt = models.TextField(null=True, blank=True)
     link = models.URLField()
     date = models.DateTimeField()
+    tags = TaggableManager()
 
     class Meta:
         ordering = ('-date',)
