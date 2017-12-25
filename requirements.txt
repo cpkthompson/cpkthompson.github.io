@@ -1,6 +1,10 @@
 dj-database-url==0.4.1
 Django==1.11.1
+django-admin-interface==0.5.8
 django-classy-tags==0.8.0
+django-colorfield==0.1.14
+django-flat-responsive==2.0
+django-flat-theme==1.1.4
 django-taggit==0.22.1
 django-taggit-templatetags2==1.6.1
 gunicorn==19.6.0
