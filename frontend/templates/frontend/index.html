@@ -1,5 +1,72 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% block content %}
-    hello, world
+    <div class="hero is-medium bgimg">
+        <div class="hero-body">
+
+            <div class="contain">
+                <div class="columns">
+                    <div class="column is-three-fifths is-offset-one-fifth">
+                        <h1 class="w3-jumbo title w3-hide-small w3-text-black">
+                            Hello, my name is <a href="/about" class="w3-text-blue-grey">Charles</a> and I love <a
+                                href="{% url 'work:WorkListView' %}" class="w3-text-blue-grey">making &rightarrow;</a>
+                            <a href="/about" class="w3-text-blue-grey button is-loading is-white"></a>
+                            <br>
+                            &bull;&bull;&bull;
+                            things for the
+                            web.
+                        </h1>
+                        <h1 class="w3-xxlarge title w3-hide-large w3-hide-medium">
+                            Hello, my name is <a href="/about" class="w3-text-blue-grey">Charles</a> and I love <a
+                                href="{% url 'work:WorkListView' %}" class="w3-text-blue-grey">making &rightarrow;</a>
+                            <a href="/about" class="w3-text-blue-grey button is-loading is-white"></a>
+                            <br>
+                            &bull;&bull;&bull;
+                            things for the
+                            web.
+                        </h1>
+
+                        <hr style="background-color: black;width:150px;border:5px solid black;padding: 0px"
+                            class="w3-round-large">
+                        <div class="w3-padding-16 w3-xlarge">
+                            I’m currently an Entreprenuer-In-Training at <a
+                                href="http://meltwater.org/" class="">MEST</a> in Accra, Ghana.
+                        </div>
+                        <div class="w3-padding-16 w3-xlarge">
+                            This is my personal website and it's still relatively new so please be
+                            gentle. It’s also a playground for me so I’m constantly trying new stuff, making changes,
+                            and
+                            probably
+                            breaking things.
+                        </div>
+                        <br>
+                        <div class="w3-padding-16 w3-large w3-border w3-padding w3-light-grey">
+                            This site was created using HTML, CSS, and JavaScript using the Python Web Framework: <a
+                                href="https://djangoproject.com">Django</a>; It was carefully hand-coded in <a
+                                href="https://www.jetbrains.com/pycharm/">PyCharm</a> and hosted on
+                            <a href="//heroku.com">Heroku</a> because it was free. Deployed in a continuous integration
+                            fashion,
+                            because Facebook bragged about it and why not? This was done with the help of <a
+                                href="//github.com">GitHub</a>.
+                            The codebase is version-controlled by Git and also managed on <a
+                                href="//github.com/cpkthompson/cpkthompson">GitHub</a>. The type is set in lovely <a
+                                href="https://fonts.google.com/specimen/Karla">Karla</a> and <a
+                                href="https://fonts.google.com/specimen/Raleway">Raleway</a>, all served by
+                            <a href="https://fonts.google.com">Google Fonts</a>.
+                        </div>
+                        <hr style="border: 0.5px solid grey">
+                        <div>
+                            <a href="https://twitter.com/cpkthompson" class="twitter-follow-button"
+                               data-show-count="false">Follow
+                                @cpkthompson</a>
+                            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                            <p class="w3-right">&copy; 2017 Charles Thompson. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
 {% endblock %}
