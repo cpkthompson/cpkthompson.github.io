@@ -2,78 +2,120 @@
 {% load staticfiles %}
 {% block content %}
 
-    <div class="bgimg">
-        <div class="w3-content w3-container w3-padding-32 ">
-        <div class="w3-jumbo w3-text-black  w3-hide-small" style="text-transform: lowercase;font-family: Raleway"><a href="/">home</a>
-            / About
-        </div>
-        <div class="w3-xxxlarge w3-text-black w3-hide-large w3-hide-medium" style="text-transform: lowercase;font-family: Raleway"><a href="/">home</a>
-            / About
-        </div>
-        <div class="w3-xxxlarge w3-hide-small w3-padding-bottom" style="opacity: 0.3; font-family: Raleway">
-            How about more than a cursory introduction?
-        </div>
-        <div class="w3-xxlarge w3-hide-large w3-hide-medium w3-padding-bottom"
-             style="opacity: 0.3; font-family: Raleway">
-            How about more than a cursory introduction?
-        </div>
-        <br>
-        <div class="w3-threequarter">
-            <div class="w3-large">
 
-                Hi! 👋
-                <img src="{% static 'frontend/images/cpkthompson.jpg' %}" alt=""
-                     class="w3-circle w3-right w3-padding w3-hide-small"
-                     style="max-height: 150px">
-                <img src="{% static 'frontend/images/cpkthompson.jpg' %}" alt=""
-                     class="w3-circle w3-right w3-padding w3-hide-large w3-hide-medium" style="max-height: 100px">
-                <br>
-                <br>
-                My name is Charles Thompson and I’m terribly sorry if you’re tired of seeing this name or my <a target="_blank"
-                    href="//twitter.com/cpkthompson">not so hilarious tweets</a>. I only promise you more of each.
-                <br>
-                <br>
-                Okay, okay so myself? I’m a Junior Web Developer, and what that means to me is: I play a lot with beginner code and do a lot of web development <a href="">"things"</a> but in all, haven’t really done anything substantial. I’ve done a few projects
-                <a target="_blank" href="//github.com/cpkthompson">here and there</a> , but you know, they’re all playground stuff.
-                <br>
-                <br>
-                I’m also a design enthusiast and I only started saying this to look cool but eventually trapped myself into
-                actually liking design. Design means a lot to different people so I’ll clarify the particular type I’m
-                interested in later.
-                <br>
-                <br>
-                I live in <a target="_blank" href="https://en.wikipedia.org/wiki/Accra">Accra, Ghana</a>. A developing West African Nation
-                about to take on the world. I attended <a target="_blank" href="https://www.ug.edu.gh/">University of Ghana</a> for my
-                parents and <a target="_blank" href="https://smude.edu.in">Sikkim Manipal University - DE</a> for myself. LOL etcetera
-                etcetera.
-                <br>
-                <br>
-                I’m very interested in systems, processes and the meta details of how things become what they are (borrowed this sentence from
-                <a target="_blank" href="https://twitter.com/equartey">someone</a> who accurately said what I've been trying to say, so I <i>borrowed</i>). I'm also the
-                biggest science and technology aficionado alive with an even more honest way of saying it being: I’m
-                addicted to technology and don’t think staring at screens 24/7 is a bad thing. That said, you’ll be
-                surprised to know <a target="_blank" href="http://www.imdb.com/title/tt2085059/?ref_=nv_sr_1">Black Mirror</a> (and <a target="_blank" href="http://www.imdb.com/title/tt0944947/?ref_=nv_sr_1">Game of Thrones</a> 😉) are my all time favorite TV shows and I’m open to <a target="_blank"
-                    href="https://twitter.com/cpkthompson">discussion</a> about them any time of the day! Oh, I almost forgot, there's nothing I love more than an episode of
-                <a target="_blank" href="http://hellointernet.fm">Hello Internet</a>. Yes, I'm a Tim :)
-                <br>
-                <br>
-                <h3>Find me</h3>
-                I limit myself to 140 characters <a target="_blank" href="https://twitter.com/cpkthompson">over here</a>, upload nice selfies for the love of my life to see
-                <a target="_blank" href="https://instagram.com/cpkthompson">here</a> and do emails via <a href="mailto:charles@cpkthompson.com?Subject=Hello%20Again!" target="_top">thompsoncharles@live.com</a>.
-                <br>
-                <br>
-                Okay, alright, that's enough for an introduction, right? I'll fake it up later when I really want to get a job somewhere or something but until then, I guess this has been fun.
-                <br>
-                <br>
-                Cheers,
-                <br>
-                Charles Thompson.
+    <div class="hero is-medium bgimg">
+        <div class="hero-body">
+            <div class="columns">
+                <div class="column is-three-fifths is-offset-one-fifth">
+                    <h1 class="w3-jumbo w3-text-black  w3-hide-small" style="text-transform: lowercase;"><a
+                            href="/">home</a>
+                        / About
+                    </h1>
+                    <h1 class="w3-xxxlarge w3-text-black w3-hide-large w3-hide-medium"
+                        style="text-transform: lowercase;"><a href="/">home</a>
+                        / About
+                    </h1>
+                    <h1 class="w3-xxxlarge w3-hide-small w3-padding-bottom" style="opacity: 0.3; ">
+                        How about more than a cursory introduction?
+                    </h1>
+                    <h1 class="w3-xxlarge w3-hide-large w3-hide-medium w3-padding-bottom"
+                        style="opacity: 0.3; ">
+                        How about more than a cursory introduction?
+                    </h1>
+                    <br>
+                    <div class="w3-threequarter">
+                        <div class="w3-large w3-text-black">
+
+                            Hi! 👋
+                            <img src="{% static 'frontend/images/cpkthompson.jpg' %}" alt=""
+                                 class="w3-circle w3-right w3-padding w3-hide-small"
+                                 style="max-height: 150px">
+                            <img src="{% static 'frontend/images/cpkthompson.jpg' %}" alt=""
+                                 class="w3-circle w3-right w3-padding w3-hide-large w3-hide-medium"
+                                 style="max-height: 100px">
+                            <br>
+                            <br>
+                            My name is Charles Thompson and I’m terribly sorry if you’re tired of seeing this name
+                            or my <a
+                                target="_blank"
+                                href="//twitter.com/cpkthompson">not so hilarious tweets</a>. I only promise you
+                            more of each.
+                            <br>
+                            <br>
+                            Okay, okay so myself? I’m a Junior Web Developer, and what that means to me is: I play a
+                            lot with
+                            beginner code and do a lot of web development <a href="">"things"</a> but in all,
+                            haven’t really
+                            done anything substantial. I’ve done a few projects
+                            <a target="_blank" href="//github.com/cpkthompson">here and there</a> , but you know,
+                            they’re all
+                            playground stuff.
+                            <br>
+                            <br>
+                            I’m also a design enthusiast and I only started saying this to look cool but eventually
+                            trapped
+                            myself into
+                            actually liking design. Design means a lot to different people so I’ll clarify the
+                            particular type
+                            I’m
+                            interested in later.
+                            <br>
+                            <br>
+                            I live in <a target="_blank" href="https://en.wikipedia.org/wiki/Accra">Accra, Ghana</a>.
+                            A
+                            developing West African Nation
+                            about to take on the world. I attended <a target="_blank" href="https://www.ug.edu.gh/">University
+                            of Ghana</a> for my
+                            parents and <a target="_blank" href="https://smude.edu.in">Sikkim Manipal University -
+                            DE</a> for
+                            myself. LOL etcetera
+                            etcetera.
+                            <br>
+                            <br>
+                            I’m very interested in systems, processes and the meta details of how things become what
+                            they are
+                            (borrowed this sentence from
+                            <a target="_blank" href="https://twitter.com/equartey">someone</a> who accurately said
+                            what I've
+                            been trying to say, so I <i>borrowed</i>). I'm also the
+                            biggest science and technology aficionado alive with an even more honest way of saying
+                            it being: I’m
+                            addicted to technology and don’t think staring at screens 24/7 is a bad thing. That
+                            said, you’ll be
+                            surprised to know <a target="_blank"
+                                                 href="http://www.imdb.com/title/tt2085059/?ref_=nv_sr_1">Black
+                            Mirror</a> (and <a target="_blank"
+                                               href="http://www.imdb.com/title/tt0944947/?ref_=nv_sr_1">Game of
+                            Thrones</a> 😉) are my all time favorite TV shows and I’m open to <a target="_blank"
+                                                                                                 href="https://twitter.com/cpkthompson">discussion</a>
+                            about them any time of the day! Oh, I almost forgot, there's nothing I love more than an
+                            episode of
+                            <a target="_blank" href="http://hellointernet.fm">Hello Internet</a>. Yes, I'm a Tim :)
+                            <br>
+                            <br>
+                            <h3>Find me</h3>
+                            I limit myself to 140 characters <a target="_blank"
+                                                                href="https://twitter.com/cpkthompson">over
+                            here</a>, upload nice selfies for the love of my life to see
+                            <a target="_blank" href="https://instagram.com/cpkthompson">here</a> and do emails via
+                            <a
+                                    href="mailto:charles@cpkthompson.com?Subject=Hello%20Again!" target="_top">thompsoncharles@live.com</a>.
+                            <br>
+                            <br>
+                            Okay, alright, that's enough for an introduction, right? I'll flower it up later when I
+                            really want to work at Google or something but until then, I hope this has been fun.
+                            <br>
+                            <br>
+                            Cheers,
+                            <br>
+                            Charles Thompson.
+                        </div>
+                    </div>
+                    <div class="w3-quarter">
+                        <br>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="w3-quarter">
-            <br>
-        </div>
-
         </div>
     </div>
 {% endblock %}
