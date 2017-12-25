@@ -29,6 +29,9 @@ DEBUG = True
 # Application definition
 
 INSTALLED_APPS = [
+    'admin_interface',
+    'flat_responsive',
+    'colorfield',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
