@@ -1,5 +1,3 @@
-from django.views.generic import ListView
-from work.models import WorkPost
 from django.shortcuts import render
 
 

@@ -4,10 +4,10 @@
     <div class="bgimg">
         <div class="w3-content w3-container w3-padding-32">
             <div class="w3-jumbo w3-text-black w3-hide-small" style="text-transform: lowercase;font-family: Raleway"><a
-                    href="/">home</a> / making
+                    href="/">home</a> / work
             </div>
             <div class="w3-xxxlarge w3-text-black w3-hide-large w3-hide-medium"
-                 style="text-transform: lowercase;font-family: Raleway"><a href="/">home </a>/ making
+                 style="text-transform: lowercase;font-family: Raleway"><a href="/">home </a>/ work
             </div>
             <div class="w3-xxxlarge w3-hide-small w3-padding-bottom" style="opacity: 0.3; font-family: Raleway">
                 A few fun projects and freelance work I've done over the years
@@ -20,12 +20,12 @@
             <div class="w3-threequarter">
 
                 <div class="columns is-multiline">
-                    {% for work_post in work_posts %}
+                    {% for work in works %}
 
                         <div class="column is-half">
                                 <div class="card">
                                     {#                                    <div class="card-image">#}
-                                    {#                                        <a href="{{ work_post.get_absolute_url }}">#}
+                                    {#                                        <a href="{{ work.get_absolute_url }}">#}
                                     {#                                            <figure class="image is-2by1">#}
                                     {#                                                <img src="https://bulma.io/images/placeholders/640x320.png" alt="">#}
                                     {#                                            </figure>#}
@@ -33,10 +33,10 @@
                                     {#                                    </div>#}
                                     <div class="card-content">
                                         <div class="tag is-danger">Web Development</div>
-                                        <a href="{{ work_post.post_link }}" target="_blank"><h1
-                                                class="subtitle w3-margin-top">{{ work_post.post_title }}
+                                        <a href="{{ work.link }}" target="_blank"><h1
+                                                class="subtitle w3-margin-top">{{ work.title }}
                                             &rightarrow;</h1></a>
-                                        <p class="w3-large">{{ work_post.post_excerpt }}</p>
+                                        <p class="w3-large">{{ work.excerpt }}</p>
                                     </div>
                                 </div>
                         </div>
