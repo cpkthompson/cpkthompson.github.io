@@ -7,6 +7,7 @@ class Work(models.Model):
     slug = models.SlugField(max_length=250, unique=title)
     excerpt = models.TextField(null=True, blank=True)
     link = models.URLField()
+    is_visible = models.BooleanField(default=False)
     date = models.DateTimeField()
     tags = TaggableManager()
 
