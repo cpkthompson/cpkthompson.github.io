@@ -24,7 +24,7 @@
                     {% for work in works %}
 
                         <div class="column is-half">
-                            <div class="card">
+                            <div class="card" style="min-height: 250px">
                                 {#                                    <div class="card-image">#}
                                 {#                                        <a href="{{ work.get_absolute_url }}">#}
                                 {#                                            <figure class="image is-2by1">#}
@@ -40,7 +40,7 @@
                                     <a href="{{ work.link }}" target="_blank"><h1
                                             class="subtitle w3-margin-top">{{ work.title }}
                                         &rightarrow;</h1></a>
-                                    <p class="w3-large">{{ work.excerpt }}</p>
+                                    <p class="w3-large moreless">{{ work.excerpt }}</p>
                                 </div>
                             </div>
                         </div>
