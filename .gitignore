@@ -12,3 +12,8 @@ staticfiles
 /frontend/templates/frontend/about.backup.html
 /frontend/templates/frontend/index.backup.html
 /db.sqlite3
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
